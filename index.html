@@ -78,7 +78,7 @@
     }
 
     .hero-left h1 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
       font-weight: 700;
       margin: 0 0 1.5rem 0;
       line-height: 1.1;
@@ -191,9 +191,20 @@
 
     .section__title {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 1rem;
       font-size: 2.5rem;
       color: var(--cardinal);
+      font-weight: 700;
+    }
+
+    .section__subtitle {
+      text-align: center;
+      color: var(--ink-2);
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .projects-grid {
@@ -206,16 +217,36 @@
       background: white;
       border-radius: 20px;
       padding: 2rem;
-      box-shadow: 0 8px 30px rgba(0,0,0,.08);
-      border: 1px solid #f0f0f0;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,.06);
+      border: 1px solid rgba(139, 0, 0, 0.05);
+      transition: all 0.3s ease;
       text-decoration: none;
       color: inherit;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #8B0000, #FFD700);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover::before {
+      transform: scaleX(1);
     }
 
     .project-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 15px 40px rgba(0,0,0,.12);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(139, 0, 0, .12);
+      border-color: rgba(139, 0, 0, 0.1);
     }
 
     .project-image {
@@ -257,12 +288,89 @@
     }
 
     .project-tag {
-      background: #f8f9ff;
-      border: 1px solid #e5e7eb;
-      padding: 0.25rem 0.75rem;
-      border-radius: 15px;
-      font-size: 0.8rem;
-      color: var(--ink);
+      background: linear-gradient(135deg, rgba(139, 0, 0, 0.05), rgba(255, 215, 0, 0.05));
+      border: 1px solid rgba(139, 0, 0, 0.1);
+      padding: 0.35rem 0.85rem;
+      border-radius: 18px;
+      font-size: 0.75rem;
+      color: var(--cardinal);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      transition: all 0.2s ease;
+    }
+
+    .project-tag:hover {
+      background: rgba(139, 0, 0, 0.1);
+      border-color: var(--cardinal);
+    }
+
+    /* Project Filter Buttons */
+    .project-filters {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 0.75rem 1.75rem;
+      border: 2px solid var(--cardinal);
+      background: white;
+      color: var(--cardinal);
+      border-radius: 25px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .filter-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: var(--cardinal);
+      z-index: -1;
+      transition: left 0.3s ease;
+    }
+
+    .filter-btn:hover::before {
+      left: 0;
+    }
+
+    .filter-btn:hover {
+      color: white;
+      background: transparent;
+    }
+
+    .filter-btn.active {
+      background: var(--cardinal);
+      color: white;
+    }
+
+    .project-card {
+      animation: fadeIn 0.3s ease;
+    }
+
+    .project-card.hidden {
+      display: none;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     footer {
@@ -316,9 +424,9 @@
   <section class="hero">
     <div class="hero-container">
       <div class="hero-left">
-        <h1>Hi, This is Julia👩🏻‍💻✨🤍</h1>
+        <h1>Hi, I'm Julia 👩🏻‍💻</h1>
         <div class="subtitle">
-          I am a UX designer with a background in information management and UIUX Design. With passion for UX design research, and Product Design.
+          UIUX Designer & Researcher passionate about solving real problems through design
         </div>
         <div class="hero-actions">
           <a class="btn linkedin" href="https://www.linkedin.com/in/juliayao333/" target="_blank" rel="noopener noreferrer">
@@ -354,10 +462,19 @@
   <section class="home-projects">
     <div class="container">
       <h1 class="section__title">Works and Projects</h1>
+      <p class="section__subtitle">A collection of my UX/UI design projects and development work that showcase my skills in solving real-world problems</p>
+      
+      <!-- Category Filter Buttons -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="design">UI/UX Design Project</button>
+        <button class="filter-btn" data-filter="coding">Coding Project</button>
+      </div>
+
       <div class="projects-grid">
         
         <!-- Thrive -->
-        <a href="thrive.html" class="project-card">
+        <a href="thrive.html" class="project-card" data-category="design">
           <div class="project-image">
             <img src="img/AHA/AHA red.png" alt="Thrive app mockup">
           </div>
@@ -373,7 +490,7 @@
         </a>
 
         <!-- TechCare -->
-        <a href="techcare.html" class="project-card">
+        <a href="techcare.html" class="project-card" data-category="design">
           <div class="project-image">
             <img src="img/Techcare/combine.PNG" alt="TechCare cover">
           </div>
@@ -388,7 +505,7 @@
         </a>
 
         <!-- Recycle Go -->
-        <a href="recycle.html" class="project-card">
+        <a href="recycle.html" class="project-card" data-category="design">
           <div class="project-image">
             <img src="img/Recycle.png" alt="Recycle Go cover">
           </div>
@@ -403,7 +520,7 @@
         </a>
 
         <!-- EasyTap -->
-        <a href="easytap.html" class="project-card">
+        <a href="easytap.html" class="project-card" data-category="design">
           <div class="project-image">
             <img src="img/EasyTap/EasyTap.png" alt="EasyTap app mockup">
           </div>
@@ -438,6 +555,35 @@
         btn.setAttribute('aria-expanded', open);
       });
     })();
+  </script>
+
+  <!-- Project Filter Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const filter = this.getAttribute('data-filter');
+
+          // Update active button
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+
+          // Filter project cards
+          projectCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            
+            if (filter === 'all' || category === filter) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+    });
   </script>
 </body>
 

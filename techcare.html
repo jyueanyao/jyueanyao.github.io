@@ -82,7 +82,7 @@
         <h2>Expected Impact</h2>
         <div style="background: #ecfdf5; padding: 2rem; border-radius: 12px; border: 1px solid #a7f3d0; margin: 2rem 0;">
           <h3 style="color: #065f46; margin-top: 0;">Measurable Care Improvements</h3>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
             <div style="text-align: center; background: white; padding: 1.5rem; border-radius: 8px;">
               <div style="font-size: 2.5rem; font-weight: bold; color: #8B0000;">40%</div>
               <p style="margin: 0.5rem 0 0; font-weight: 600;">Reduction in manual monitoring time</p>
@@ -226,23 +226,122 @@
       <!-- 4. Research Methodology -->
       <section>
         <h2>Research Methodology</h2>
+        
+        <!-- Primary Research Methods -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin: 2rem 0;">
+          
+          <!-- 1. Contextual Inquiry / Field Observation -->
+          <div style="background: #f8f9ff; padding: 2rem; border-radius: 12px; border-left: 4px solid #8B0000;">
+            <h3 style="color: #8B0000; margin-top: 0; font-size: 1.1rem;">1. Contextual Inquiry (On-site Observation)</h3>
+            <div style="background: rgba(139, 0, 0, 0.05); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+              <p style="margin: 0; font-weight: 600; color: #8B0000;">Why: Understanding real-world context</p>
+            </div>
+            <ul style="margin-bottom: 1rem;">
+              <li>Observed care staff workflows in actual environment</li>
+              <li>Identified unspoken pain points and workarounds</li>
+              <li>Captured non-verbal behaviors and environmental constraints</li>
+              <li>Observed resident-staff interactions during care routines</li>
+            </ul>
+            <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 0;"><strong>When to use:</strong> Early-stage research to understand real user behaviors, not just what they say they do. Essential for healthcare settings with complex workflows.</p>
+          </div>
+
+          <!-- 2. User Interviews -->
+          <div style="background: #f8f9ff; padding: 2rem; border-radius: 12px; border-left: 4px solid #8B0000;">
+            <h3 style="color: #8B0000; margin-top: 0; font-size: 1.1rem;">2. In-depth Interviews</h3>
+            <div style="background: rgba(139, 0, 0, 0.05); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+              <p style="margin: 0; font-weight: 600; color: #8B0000;">Why: Capturing user motivations and pain points</p>
+            </div>
+            <ul style="margin-bottom: 1rem;">
+              <li>Conducted 15+ interviews with nursing staff and caregivers</li>
+              <li>Asked open-ended questions about daily challenges</li>
+              <li>Understood emotional context (stress, safety concerns)</li>
+              <li>Identified hidden needs not visible in observation</li>
+            </ul>
+            <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 0;"><strong>When to use:</strong> Best for exploring "why" behind behaviors. Qualitative data reveals motivations, concerns, and workarounds that observation alone cannot capture.</p>
+          </div>
+
+          <!-- 3. Surveys -->
+          <div style="background: #f8f9ff; padding: 2rem; border-radius: 12px; border-left: 4px solid #8B0000;">
+            <h3 style="color: #8B0000; margin-top: 0; font-size: 1.1rem;">3. Surveys & Questionnaires</h3>
+            <div style="background: rgba(139, 0, 0, 0.05); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+              <p style="margin: 0; font-weight: 600; color: #8B0000;">Why: Gathering quantifiable data from larger sample</p>
+            </div>
+            <ul style="margin-bottom: 1rem;">
+              <li>Distributed to all 21 care staff members (nurses + assistants)</li>
+              <li>Measured frequency of specific pain points</li>
+              <li>Validated hypotheses from interviews with statistical backing</li>
+              <li>Prioritized problems by severity and frequency</li>
+            </ul>
+            <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 0;"><strong>When to use:</strong> Efficient for quantifying patterns across larger populations. Validates qualitative findings and reveals statistically significant issues.</p>
+          </div>
+
+          <!-- 4. Usability Testing / Prototype Testing -->
+          <div style="background: #f8f9ff; padding: 2rem; border-radius: 12px; border-left: 4px solid #8B0000;">
+            <h3 style="color: #8B0000; margin-top: 0; font-size: 1.1rem;">4. Usability Testing (Iterative)</h3>
+            <div style="background: rgba(139, 0, 0, 0.05); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+              <p style="margin: 0; font-weight: 600; color: #8B0000;">Why: Validating design solutions with actual users</p>
+            </div>
+            <ul style="margin-bottom: 1rem;">
+              <li>Tested low-fidelity and high-fidelity prototypes with care staff</li>
+              <li>Conducted task-based testing (e.g., "Check resident location in 10 seconds")</li>
+              <li>Measured task success rate and time-on-task</li>
+              <li>Identified usability issues before full implementation</li>
+            </ul>
+            <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 0;"><strong>When to use:</strong> Critical for iterating on designs. Reveals how users actually interact with solutions and what needs adjustment before development.</p>
+          </div>
+
+        </div>
+
+        <!-- Research Timeline
+        <div style="background: #fef9e7; padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+          <h3 style="color: #92400e; margin-top: 0;">Research Timeline & Progression</h3>
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr style="background: #fff8e1; border-bottom: 2px solid #f59e0b;">
+              <th style="padding: 1rem; text-align: left; border: 1px solid #fcd34d;">Phase</th>
+              <th style="padding: 1rem; text-align: left; border: 1px solid #fcd34d;">Research Method</th>
+              <th style="padding: 1rem; text-align: left; border: 1px solid #fcd34d;">Why at this stage</th>
+              <th style="padding: 1rem; text-align: left; border: 1px solid #fcd34d;">Insights Gained</th>
+            </tr>
+            <tr style="border-bottom: 1px solid #fcd34d;">
+              <td style="padding: 1rem; border: 1px solid #fcd34d;"><strong>Discovery</strong></td>
+              <td style="padding: 1rem; border: 1px solid #fcd34d;">Contextual Inquiry + Interviews</td>
+              <td style="padding: 1rem; border: 1px solid #fcd34d;">Need to understand real environment and user motivation before designing</td>
+              <td style="padding: 1rem; border: 1px solid #fcd34d;">Safety concerns, manual workarounds, staff communication gaps</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #fcd34d;">
+              <td style="padding: 1rem; border: 1px solid #fcd34d;"><strong>Validation</strong></td>
+              <td style="padding: 1rem; border: 1px solid #fcd34d;">Surveys</td>
+              <td style="padding: 1rem; border: 1px solid #fcd34d;">Verify findings across all staff to prioritize features</td>
+              <td style="padding: 1rem; border: 1px solid #fcd34d;">40% time waste on manual checks, 60% emergency response delay</td>
+            </tr>
+            <tr>
+              <td style="padding: 1rem; border: 1px solid #fcd34d;"><strong>Design Iteration</strong></td>
+              <td style="padding: 1rem; border: 1px solid #fcd34d;">Usability Testing</td>
+              <td style="padding: 1rem; border: 1px solid #fcd34d;">Catch usability issues early before implementation</td>
+              <td style="padding: 1rem; border: 1px solid #fcd34d;">Dashboard layout needs adjustment, alert system needs clearer urgency levels</td>
+            </tr>
+          </table>
+        </div> -->
+
+        <!-- Original detailed method boxes -->
+        <h3>Technical & Domain Research</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
           <div style="background: #f8f9ff; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #8B0000;">
-            <h3 style="color: #8B0000; margin-top: 0;">Field Research</h3>
-            <ul>
-              <li>On-site observation at elderly care facilities</li>
-              <li>Caregiver interviews and workflow analysis</li>
-              <li>Identification of daily operational pain points</li>
-              <li>Current technology usage assessment</li>
-            </ul>
-          </div>
-          <div style="background: #f8f9ff; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #8B0000;">
-            <h3 style="color: #8B0000; margin-top: 0;">Technical Research</h3>
-            <ul>
+            <h4 style="color: #8B0000; margin-top: 0;">Technical Research</h4>
+            <ul style="margin-bottom: 0;">
               <li>BLE (Bluetooth Low Energy) technology evaluation</li>
               <li>Indoor positioning system design</li>
               <li>Database architecture planning</li>
               <li>Real-time monitoring system requirements</li>
+            </ul>
+          </div>
+          <div style="background: #f8f9ff; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #8B0000;">
+            <h4 style="color: #8B0000; margin-top: 0;">Domain Research</h4>
+            <ul style="margin-bottom: 0;">
+              <li>Dementia care best practices</li>
+              <li>Healthcare compliance requirements (Taiwan healthcare regulations)</li>
+              <li>Elderly user accessibility standards</li>
+              <li>Competitive analysis of similar systems</li>
             </ul>
           </div>
         </div>
@@ -445,7 +544,7 @@
         <h2>Interface Design & Prototypes</h2>
         <p>The TechCare interface was designed with simplicity and efficiency in mind, ensuring caregivers can quickly access critical information during high-stress situations.</p>
         
-        <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+        <!-- <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; margin: 2rem 0;">
           <h3 style="color: #8B0000; margin-top: 0;">Design Principles</h3>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
             <div>
@@ -465,9 +564,9 @@
               <p style="font-size: 0.85rem; color: #6b7280;">Role-based access with secure authentication</p>
             </div>
           </div>
-        </div>
+        </div> -->
 
-        <h3>Key Interface Features</h3>
+        <!-- <h3>Key Interface Features</h3> -->
         <div style="position: relative; max-width: 800px; margin: 2rem auto; background: #f8f9fa; border-radius: 12px; overflow: hidden;">
           <div id="prototype-slider" style="display: flex; transition: transform 0.3s ease;">
             <div style="min-width: 100%; padding: 2rem; text-align: center;">
