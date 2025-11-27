@@ -1,5 +1,5 @@
 /* Week03 Final — Flexbox-first layout with clean structure */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600;700&display=swap');
+/* Removed external Google Fonts to enforce system SF font stack */
 
 /* SF Font Definition */
 @supports (font-family: "SF Pro Display") {
@@ -64,7 +64,7 @@ body{
 /* Hero */
 .hero{display:flex;flex-direction:column;gap:0;align-items:stretch;justify-content:center;padding:0;min-height:auto;text-align:center;position:relative;background:#fff}
 .hero__text{flex:1 1 100%;min-width:280px;background:#fff;border-radius:0;padding:3rem 2rem;box-shadow:none;border-right:6px solid var(--gold);}
-.hero__text h1{font-family:'Playfair Display', serif;font-size:clamp(2rem,5vw,3.2rem);line-height:1.05;margin-bottom:.7rem;letter-spacing:.5px;color:var(--cardinal);display:block;width:100%;margin:0;}
+.hero__text h1{font-family:var(--sf-font);font-size:clamp(2rem,5vw,3.2rem);line-height:1.05;margin-bottom:.7rem;letter-spacing:.5px;color:var(--cardinal);display:block;width:100%;margin:0;}
 .hero__text p{margin-top:var(--s3);color:var(--ink-2);max-width:60ch;margin-left:auto;margin-right:auto;font-size:1rem;text-align:left}
 .hero__actions{margin-top:var(--s4);display:flex;gap:var(--s3);flex-wrap:wrap;justify-content:flex-start}
 .btn{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:600;border-radius:12px;padding:.75rem 1rem;border:1px solid transparent}
@@ -142,7 +142,7 @@ p, li, span, div {
 
 /* Project Navigation */
 .project-nav{display:flex;justify-content:space-between;align-items:center;margin:2rem 0 4rem 0;gap:2rem}
-.nav-btn{display:inline-block;padding:.75rem 1.5rem;background-color:#8B0000;color:white;text-decoration:none;border-radius:8px;font-weight:600;font-family:'Inter',sans-serif;transition:background-color 0.3s ease}
+.nav-btn{display:inline-block;padding:.75rem 1.5rem;background-color:#8B0000;color:white;text-decoration:none;border-radius:8px;font-weight:600;font-family:var(--sf-font);transition:background-color 0.3s ease}
 .nav-btn:hover{background-color:#C41E3A}
 .nav-btn--prev{justify-self:flex-start}
 .nav-btn--next{justify-self:flex-end}
@@ -238,7 +238,7 @@ p::first-line{letter-spacing:.2px}
 }
 
 .hero-left h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--sf-font);
   font-size: clamp(2rem, 5vw, 3.2rem);
   line-height: 1.05;
   margin-bottom: 1rem;
