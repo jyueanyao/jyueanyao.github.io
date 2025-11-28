@@ -7,9 +7,9 @@ const createNavBar = () => {
           <span class="brand-text">Jyue-An Yao</span>
         </a>
       <nav class="nav__links" aria-label="Main navigation">
-        <a href="index.html">Home</a>
+        <a href="projects.html">Work</a>
+        <a href="portfolio.html">Art</a>
         <a href="about.html">About</a>
-        <a href="projects.html">Works and Projects</a>
       </nav>
     </div>
   `;
