@@ -483,7 +483,7 @@
           <p class="project-meta">UIUX Designer/Researcher (Pro bono consulting) · Aug. 2025 - Present</p>
           <p class="project-description">An interactive, AI-powered fitness and wellness app inspired by the American Heart Association's Life's Essential 8</p>
           <div class="project-tags">
-            <span class="project-tag">UIUX Design</span>
+            <span class="project-tag">UIUX Design/Researcher</span>
             <span class="project-tag">Prototyping</span>
             <span class="project-tag">User Journey Mapping</span>
             <span class="project-tag">Healthcare</span>
@@ -587,6 +587,39 @@
     });
   </script>
   -->
+
+  <!-- Custom Cursor Bubble Script -->
+  <script>
+    // Hide default cursor
+    document.body.style.cursor = 'none';
+
+    // Create custom cursor bubble
+    const cursorBubble = document.createElement('div');
+    cursorBubble.className = 'custom-cursor';
+    document.body.appendChild(cursorBubble);
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+      // Update cursor bubble position
+      cursorBubble.style.left = (mouseX - 10) + 'px';
+      cursorBubble.style.top = (mouseY - 10) + 'px';
+    });
+
+    // Show cursor bubble on mouse enter
+    document.addEventListener('mouseenter', () => {
+      cursorBubble.style.opacity = '1';
+    });
+
+    // Hide cursor bubble on mouse leave
+    document.addEventListener('mouseleave', () => {
+      cursorBubble.style.opacity = '0';
+    });
+  </script>
 
 </body>
 
