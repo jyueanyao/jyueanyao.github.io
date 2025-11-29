@@ -42,13 +42,13 @@
 
     .art-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
     }
 
     .art-item {
       overflow: hidden;
-      border-radius: 16px;
+      border-radius: 24px;
     }
 
     .art-item img {
@@ -102,14 +102,22 @@
       <div class="art-container">
         <!-- Sidebar Categories -->
         <div class="art-sidebar">
-          <a class="art-category active" data-category="paintings">PAINTINGS</a>
+          <a class="art-category" data-category="paintings">PAINTINGS</a>
           <a class="art-category" data-category="drawings">DRAWINGS</a>
           <a class="art-category" data-category="photography">PHOTOGRAPHY</a>
         </div>
 
         <!-- Art Gallery Grid -->
         <div class="art-gallery">
-          <!-- Painting 1 - Lantern Peace -->
+           <!-- Painting 2 - Roar of the Stone Lions -->
+          <div class="art-item" data-type="paintings">
+            <img src="./img/Art/2.png" alt="Roar of the Stone Lions - Watercolor on Paper">
+            <div class="art-item-info">
+              <p class="art-item-title">"Roar of the Stone Lions"</p>
+              <p class="art-item-medium">Watercolor on Paper, 21.5" × 15.5", 2013</p>
+            </div>
+          </div>
+           <!-- Painting 1 - Lantern Peace -->
           <div class="art-item" data-type="paintings">
             <img src="./img/Art/1.JPG" alt="Lantern Peace - Watercolor on Paper">
             <div class="art-item-info">
@@ -118,21 +126,14 @@
             </div>
           </div>
 
-          <!-- Painting 2 - Roar of the Stone Lions -->
-          <div class="art-item" data-type="paintings">
-            <img src="./img/Art/2.png" alt="Roar of the Stone Lions - Watercolor on Paper">
-            <div class="art-item-info">
-              <p class="art-item-title">"Roar of the Stone Lions"</p>
-              <p class="art-item-medium">Watercolor on Paper, 21.5" × 15.5", 2013</p>
-            </div>
-          </div>
+        
 
-          <!-- Painting 3 - The Cobbler at Work -->
+          <!-- Painting 3 - The Cobbler -->
           <div class="art-item" data-type="paintings">
-            <img src="./img/Art/3.png" alt="The Cobbler at Work - Watercolor on Paper">
+            <img src="./img/Art/3.png" alt="The Cobbler- Ink Wash Painting">
             <div class="art-item-info">
-              <p class="art-item-title">"The Cobbler at Work"</p>
-              <p class="art-item-medium">Watercolor on Paper, 27" × 13.5", 2014</p>
+              <p class="art-item-title">"The Cobbler"</p>
+              <p class="art-item-medium">Ink Wash Painting, 27" × 13.5", 2014</p>
             </div>
           </div>
         </div>
@@ -148,6 +149,31 @@
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    // Art Category Filter
+    const artCategories = document.querySelectorAll('.art-category');
+    const artItems = document.querySelectorAll('.art-item');
+
+    artCategories.forEach(category => {
+      category.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Update active category
+        artCategories.forEach(cat => cat.classList.remove('active'));
+        category.classList.add('active');
+        
+        // Filter items
+        const selectedCategory = category.getAttribute('data-category');
+        artItems.forEach(item => {
+          if (selectedCategory === 'all' || item.getAttribute('data-type') === selectedCategory) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
   <script>
     (function(){
       var btn = document.querySelector('.nav-toggle');
