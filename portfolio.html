@@ -8,42 +8,54 @@
   <link rel="stylesheet" href="styles/style.css">
   <style>
     .art-container {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
       padding: 2rem 0;
+      align-items: center;
     }
 
     .art-sidebar {
       display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
+      flex-direction: row;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 1rem;
+      width: 100%;
+      overflow-x: auto;
     }
 
     .art-category {
       text-decoration: none;
       color: var(--text-color);
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      transition: color 0.3s ease;
+      transition: all 0.3s ease;
       cursor: pointer;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid transparent;
+      white-space: nowrap;
     }
 
-    .art-category:hover,
-    .art-category.active {
+    .art-category:hover {
       color: #3b82f6;
     }
 
+    .art-category.active,
     .art-category:first-child {
       color: #3b82f6;
+      border-bottom-color: #3b82f6;
     }
 
     .art-gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
+      width: 100%;
     }
 
     .art-item {
@@ -76,19 +88,24 @@
     }
 
     @media (max-width: 768px) {
-      .art-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+      .art-sidebar {
+        gap: 1rem;
+        padding-bottom: 0.75rem;
       }
 
-      .art-sidebar {
-        flex-direction: row;
-        gap: 1rem;
-        flex-wrap: wrap;
+      .art-category {
+        font-size: 0.75rem;
       }
 
       .art-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .art-gallery {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -113,7 +130,7 @@
         <div class="art-gallery">
            <!-- Painting 2 - Roar of the Stone Lions -->
           <div class="art-item" data-type="paintings">
-            <img src="./img/Art/2.png" alt="Roar of the Stone Lions - Watercolor on Paper">
+            <img src="./img/Art/2.jpg" alt="Roar of the Stone Lions - Watercolor on Paper">
             <div class="art-item-info">
               <p class="art-item-title">"Roar of the Stone Lions"</p>
               <p class="art-item-medium">Watercolor on Paper, 21.5" × 15.5", 2013</p>
@@ -136,6 +153,30 @@
             <div class="art-item-info">
               <p class="art-item-title">"The Cobbler"</p>
               <p class="art-item-medium">Ink Wash Painting, 27" × 13.5", 2014</p>
+            </div>
+          </div>
+
+          <!-- Drawing 1 -->
+          <div class="art-item" data-type="drawings">
+            <img src="./img/Art/Drawings1.png" alt="Drawing 1">
+            <div class="art-item-info">
+              <p class="art-item-medium">11" × 14", 2013</p>
+            </div>
+          </div>
+
+          <!-- Drawing 2 -->
+          <div class="art-item" data-type="drawings">
+            <img src="./img/Art/Drawings2.png" alt="Drawing 2">
+            <div class="art-item-info">
+              <p class="art-item-medium">11" × 14",2014</p>
+            </div>
+          </div>
+
+          <!-- Drawing 3 -->
+          <div class="art-item" data-type="drawings">
+            <img src="./img/Art/Drawings3.jpg" alt="Drawing 3">
+            <div class="art-item-info">
+              <p class="art-item-medium">11" × 14",2015</p>
             </div>
           </div>
         </div>
