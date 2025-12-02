@@ -3,8 +3,8 @@ const createNavBar = () => {
   const navHTML = `
     <div class="container nav">
         <a href="index.html" class="brand" style="text-decoration: none;">
-          <img src="img/griffithtop.jpeg" alt="Jyue-An Yao" class="nav-avatar"> 
-          <span class="brand-text">Jyue-An Yao</span>
+          <img src="img/griffithtop.jpeg" alt="Julia Yao" class="nav-avatar"> 
+          <span class="brand-text">Julia Yao</span>
         </a>
       <nav class="nav__links" aria-label="Main navigation">
         <a href="projects.html">Work</a>
