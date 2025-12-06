@@ -21,6 +21,77 @@
         --sf-font: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
       }
     }
+
+    /* Case Study Layout with Left Navigation */
+    .case-study-container {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    
+    .case-nav {
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+    }
+    
+    .case-nav h3 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #6b7280;
+      margin-bottom: 1rem;
+    }
+    
+    .case-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .case-nav li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .case-nav a {
+      text-decoration: none;
+      color: #1f2937;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      display: block;
+      padding: 0.25rem 0;
+    }
+    
+    .case-nav a:hover,
+    .case-nav a.active {
+      color: #C41E3A;
+    }
+    
+    .case-content section {
+      margin-bottom: 4rem;
+      scroll-margin-top: 100px;
+    }
+    
+    @media (max-width: 768px) {
+      .case-study-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .case-nav {
+        position: static;
+        margin-bottom: 2rem;
+      }
+      
+      .case-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -75,13 +146,25 @@
         </div>
       </div>
 
+      <!-- Case Study with Left Navigation -->
+      <div class="case-study-container">
+        <!-- Left Navigation -->
+        <nav class="case-nav">
+          <h3>Case Study</h3>
+          <ul>
+            <li><a href="#overview" class="active">Overview</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#ideation">Ideation</a></li>
+            <li><a href="#solution">Solution</a></li>
+          </ul>
+        </nav>
 
-
-      <!-- 1. Expected Impact -->
-      <section>
-        <h2>Expected Impact</h2>
+        <!-- Main Content -->
+        <div class="case-content">
+      <section id="overview">
+        <h2>Overview</h2>
         <div style="background: #ecfdf5; padding: 2rem; border-radius: 12px; border: 1px solid #a7f3d0; margin: 2rem 0;">
-          <h3 style="color: #065f46; margin-top: 0;">Measurable Care Improvements</h3>
+          <h3 style="color: #065f46; margin-top: 0;">Expected Impact</h3>
           <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
             <div style="text-align: center; background: white; padding: 1.5rem; border-radius: 8px;">
               <div style="font-size: 2.5rem; font-weight: bold; color: #8B0000;">40%</div>
@@ -125,8 +208,8 @@
       </section>
 
       <!-- 2. Background (include cultural & emotional benefits) -->
-      <section>
-        <h2>Project Background</h2>
+      <section id="research">
+        <h2>Research</h2>
         <div style="background: #fef9e7; padding: 2rem; border-radius: 12px; border-left: 4px solid #f59e0b; margin: 2rem 0;">
           <h3 style="color: #92400e; margin-top: 0;">Banqiao Veterans Home - Project Context</h3>
           <p><strong>Target Facility:</strong> A long-term care center specifically serving veterans who came to Taiwan with the KMT government, providing specialized care for elderly residents with dementia.</p>
@@ -196,8 +279,8 @@
       </section>
 
       <!-- 3. Problem Statement -->
-      <section>
-        <h2>Problem Statement</h2>
+      <section id="ideation">
+        <h2>Ideation</h2>
         <div style="background: #fff5f5; padding: 2rem; border-radius: 12px; border: 1px solid #fecaca; margin: 2rem 0;">
           <h3 style="color: #dc2626; margin-top: 0;">Key Pain Points Identified</h3>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
@@ -422,8 +505,8 @@
         </div>
       </section>
 
-      <section>
-        <h2>Solution Design</h2>
+      <section id="solution">
+        <h2>Solution</h2>
         <div style="background: #f0f9ff; padding: 2rem; border-radius: 12px; border: 1px solid #bfdbfe; margin: 2rem 0;">
           <h3 style="color: #1d4ed8; margin-top: 0;">TechCare System & Information Architecture</h3>
           <p><strong>Integrated BLE-based Monitoring & Personalization System</strong> that combines real-time location tracking with personalized care experiences, specifically designed for veteran residents.</p>
