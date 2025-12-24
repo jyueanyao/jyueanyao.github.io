@@ -715,6 +715,10 @@
           updateSlider();
         });
       </script>
+      </div><!-- case-content -->
+    </div><!-- case-study-container -->
+  </section>
+  
 
 
 
@@ -731,6 +735,37 @@
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   <script src="components/navbar.js"></script>
+  <!-- Smooth Scrolling and Active State for Case Navigation -->
+  <script>
+    document.querySelectorAll('.case-nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          window.scrollTo({ top: targetSection.offsetTop - 80, behavior: 'smooth' });
+        }
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('.case-content section');
+      const navLinks = document.querySelectorAll('.case-nav a');
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.pageYOffset >= sectionTop - 150) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
   <style>
     .case {max-width: 960px; margin: 0 auto; padding: 24px;}
     .hero {text-align: center; margin-bottom: 24px;}
