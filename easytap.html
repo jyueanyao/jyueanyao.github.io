@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EasyTap — Detachable Tap Shoes — Project</title>
+  <meta name="description" content="EasyTap — innovative product design for detachable tap shoes.">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+  <!-- SF Pro Display font - using system font stack for SF -->
+  <style>
+    @supports (font-family: "SF Pro Display") {
+      :root {
+        --sf-font: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      }
+    }
+    @supports not (font-family: "SF Pro Display") {
+      :root {
+        --sf-font: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      }
+    }
+
+    /* Case Study Layout with Left Navigation */
+    .case-study-container {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    
+    .case-nav {
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+    }
+    
+    .case-nav h3 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #6b7280;
+      margin-bottom: 1rem;
+    }
+    
+    .case-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .case-nav li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .case-nav a {
+      text-decoration: none;
+      color: #1f2937;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      display: block;
+      padding: 0.25rem 0;
+    }
+    
+    .case-nav a:hover,
+    .case-nav a.active {
+      color: #C41E3A;
+    }
+    
+    .case-content section {
+      margin-bottom: 4rem;
+      scroll-margin-top: 100px;
+    }
+    
+    @media (max-width: 768px) {
+      .case-study-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .case-nav {
+        position: static;
+        margin-bottom: 2rem;
+      }
+      
+      .case-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header"></header>
+  <script src="components/navbar.js"></script>
+
+  <main class="container">
+    <!-- Project Navigation -->
+    <div class="project-nav">
+      <a href="thrive.html" class="nav-btn nav-btn--prev">← Previous</a>
+      <a href="techcare.html" class="nav-btn nav-btn--next">Next →</a>
+    </div>
+
+    <section class="hero-full">
+      <div class="hero-right">
+        <div style="margin: 2rem 0;">
+          <img src="img/EasyTap/Shoe try on.png" alt="EasyTap Product Mockup" style="max-width: 100%; height: auto; border-radius: 12px;">
+        </div>
+      </div>
+    </section>
+
+    <section class="case">
+      <!-- Project Description -->
+      <div style="margin-bottom: 3rem;">
+        <h1 style="font-size: 3rem; font-weight: 900; color: var(--heading-color); margin-bottom: 1rem; font-family: var(--sf-font);">EasyTap</h1>
+        <p style="font-size: 1.2rem; color: var(--text-color); line-height: 1.6; max-width: 800px;">
+          Detachable tap dance shoes for dancers - a cost-effective solution that enables flexibility without compromising performance
+        </p>
+      </div>
+
+      <!-- Four Column Info Layout like FlameKeepers -->
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 3rem; padding: 2rem 0; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;">
+        <div>
+          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">TIMELINE</h4>
+          <p style="font-size: 0.9rem; color: var(--text-color);">Aug. 2025 - Present</p>
+          <p style="font-size: 0.8rem; color: var(--text-color);">[4+ Months]</p>
+        </div>
+        <div>
+          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">TEAM</h4>
+          <p style="font-size: 0.9rem; color: var(--text-color);">2 Product</p>
+          <p style="font-size: 0.9rem; color: var(--text-color);">specialists</p>
+        </div>
+        <div>
+          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">ROLE</h4>
+          <p style="font-size: 0.9rem; color: var(--text-color);">Product Designer,</p>
+          <p style="font-size: 0.9rem; color: var(--text-color);">UX Researcher</p>
+        </div>
+        <div>
+          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">SKILLS</h4>
+          <p style="font-size: 0.9rem; color: var(--text-color);">Product Design, User Research</p>
+          <p style="font-size: 0.9rem; color: var(--text-color);">Prototyping, Market Analysis</p>
+        </div>
+      </div>
+
+      <!-- Case Study with Left Navigation -->
+      <div class="case-study-container">
+        <!-- <nav class="case-nav">
+          <h3>Case Study</h3>
+          <ul>
+            <li><a href="#overview" class="active">Overview</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#ideation">Ideation</a></li>
+            <li><a href="#solution">Solution</a></li>
+          </ul>
+        </nav> -->
+
+        <div class="case-content">
+          <section id="overview">
+            <h2>Overview</h2>
+            <div class="impact-grid" style="margin: 2rem 0;">
+              <div>
+                <h3 style="color: var(--heading-color); font-family: var(--sf-font);">Impact — For Dancers</h3>
+                <ul style="color: var(--text-color);">
+                  <li>Reduced financial burden on tap dancing</li>
+                  <li>Increased flexibility in shoe choices</li>
+                  <li>Better portability for travel and training</li>
+                  <li>Access to quality tap dancing for more people</li>
+                </ul>
+              </div>
+              <div>
+                <h3 style="color: var(--heading-color); font-family: var(--sf-font);">Impact — For the Industry</h3>
+                <ul style="color: var(--text-color);">
+                  <li>More accessible tap dancing to wider audience</li>
+                  <li>Innovative approach to traditional product</li>
+                  <li>Growing market for affordable solutions</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section id="research">
+            <h2>Research</h2>
+            <p>
+              Dancers face challenges with traditional tap shoes: high cost, difficulty in transportation, and the burden of carrying multiple pairs. Many dancers wish for a more flexible, cost-effective solution that doesn't compromise on performance.
+            </p>
+          </section>
+
+          <section id="ideation">
+            <h2>Ideation</h2>
+            <p>
+              <strong style="color: #0052a3;">How might we</strong> create an affordable, portable tap shoe solution that enables dancers to reduce costs and carrying burden while maintaining performance quality?
+            </p>
+          </section>
+
+          <section id="solution">
+            <h2>Solution</h2>
+            <p>
+              <strong style="color: #8B0000;">EasyTap</strong> is a detachable tap shoe system that allows dancers to convert regular dance shoes into tap shoes, reducing cost and carrying burden while providing professional-grade performance.
+            </p>
+
+            <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin: 2rem 0; position: relative;">
+              <div style="position: relative; min-height: 300px; display: flex; align-items: center; justify-content: center;">
+                <div class="persona-slide" id="persona-1" style="position: absolute; width: 70%; opacity: 1; transition: opacity 0.5s ease;">
+                  <img src="img/EasyTap/EasytapPersona1.png" alt="EasyTap Persona 1" style="max-width: 100%; height: auto; border-radius: 12px;">
+                </div>
+                <div class="persona-slide" id="persona-2" style="position: absolute; width: 70%; opacity: 0; transition: opacity 0.5s ease;">
+                  <img src="img/EasyTap/EasyTapPersona2.png" alt="EasyTap Persona 2" style="max-width: 100%; height: auto; border-radius: 12px;">
+                </div>
+                <button class="persona-nav-btn" onclick="prevPersona()" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(255, 255, 255, 0.85); color: #333; border: none; padding: 12px 16px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; z-index: 10; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; transition: background 0.3s ease;">‹</button>
+                <button class="persona-nav-btn" onclick="nextPersona()" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(255, 255, 255, 0.85); color: #333; border: none; padding: 12px 16px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; z-index: 10; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; transition: background 0.3s ease;">›</button>
+              </div>
+              <div style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem;">
+                <span class="persona-dot" onclick="showPersona(1)" style="width: 12px; height: 12px; border-radius: 50%; background: #C41E3A; cursor: pointer; transition: all 0.3s ease;" id="dot-1"></span>
+                <span class="persona-dot" onclick="showPersona(2)" style="width: 12px; height: 12px; border-radius: 50%; background: #e5e7eb; cursor: pointer; transition: all 0.3s ease;" id="dot-2"></span>
+              </div>
+            </div>
+
+            <section>
+              <h3>Key Features</h3>
+              <div style="display: grid">
+                <div>
+                  <ul class="cols">
+                    <li><strong>Detachable Design</strong> — easily attach and detach tap soles</li>
+                    <li><strong>Cost-Effective</strong> — reduce investment in multiple tap shoes</li>
+                    <li><strong>Lightweight</strong> — portable and easy to carry</li>
+                    <li><strong>Professional Sound</strong> — high-quality tap performance</li>
+                    <li><strong>Universal Compatibility</strong> — works with various dance shoes</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h3>Design Approach</h3>
+              <p>
+                The design prioritizes accessibility and affordability while maintaining the performance quality that professional and amateur dancers expect. Every detail was considered to balance functionality, cost, and user experience.
+              </p>
+            </section>
+
+            <section>
+              <h3>Sketches</h3>
+              <div style="margin: 0;">
+                <img src="img/EasyTap/EasyTap.png" alt="EasyTap Features" style="max-width: 100%; height: auto; border-radius: 12px;">
+              </div>
+            </section>
+
+            <section>
+              <h3>Illustrator Colorway</h3>
+              <div style="margin: 0;">
+                <img src="img/EasyTap/illustrator.png" alt="EasyTap Features" style="max-width: 100%; height: auto; border-radius: 12px;">
+              </div>
+            </section>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__row">
+      <p>© <span id="year"></span> Jyue-An Yao</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="components/navbar.js"></script>
+  <!-- Persona slider and smooth scrolling -->
+  <script>
+    let currentPersona = 1;
+
+    function showPersona(n) {
+      currentPersona = n;
+      updatePersonaDisplay();
+    }
+
+    function nextPersona() {
+      currentPersona = currentPersona === 1 ? 2 : 1;
+      updatePersonaDisplay();
+    }
+
+    function prevPersona() {
+      currentPersona = currentPersona === 1 ? 2 : 1;
+      updatePersonaDisplay();
+    }
+
+    function updatePersonaDisplay() {
+      document.getElementById('persona-1').style.opacity = currentPersona === 1 ? '1' : '0';
+      document.getElementById('persona-2').style.opacity = currentPersona === 2 ? '1' : '0';
+      document.getElementById('dot-1').style.background = currentPersona === 1 ? '#C41E3A' : '#e5e7eb';
+      document.getElementById('dot-2').style.background = currentPersona === 2 ? '#C41E3A' : '#e5e7eb';
+    }
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('.case-nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          window.scrollTo({ top: targetSection.offsetTop - 80, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Update active state on scroll
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('.case-content section');
+      const navLinks = document.querySelectorAll('.case-nav a');
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.pageYOffset >= sectionTop - 150) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+  <style>
+    .case {max-width: 960px; margin: 0 auto; padding: 24px;}
+    .hero {text-align: center; margin-bottom: 24px;}
+    .hero h1 {font-size: 2rem; margin: 0 0 8px; font-family: var(--sf-font); color: var(--heading-color);}
+    .subtitle {color: var(--text-color); margin: 0 auto 8px; max-width: 720px; font-family: var(--sf-font);}
+    .meta.grid {display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 12px; margin: 16px 0 24px;}
+    
+    /* H2 styles - now using global settings */
+    h2 {
+      margin-top: 28px; 
+      font-size: 1.4rem; 
+      color: var(--heading-color);
+      font-family: var(--sf-font);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    
+    /* Body text styles - black color */
+    p, li, div, span {
+      font-family: var(--sf-font);
+      color: var(--text-color);
+    }
+    
+    h3 {margin-top: 12px; font-size: 1.1rem; font-family: var(--sf-font); color: var(--heading-color);}
+    ul {padding-left: 18px;}
+    .cols {columns: 2; column-gap: 24px;}
+    .impact-grid {display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 16px;}
+    @media (max-width: 640px){ .cols {columns: 1;} }
+  </style>
+</body>
+</html>

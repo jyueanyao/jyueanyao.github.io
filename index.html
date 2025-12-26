@@ -1,25 +1,627 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Redirecting...</title>
 
-    <!-- Immediate redirect to the new domain -->
-    <meta http-equiv="refresh" content="0; url=https://juliayao.com" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Jyue-An (Julia) Yao — Portfolio</title>
+  <meta name="description" content="Responsive homepage with Flexbox layout linking to Projects.">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/animation.css">
+  <!-- Using system SF font stack via styles/style.css; removed external Google Fonts -->
 
-    <!-- Canonical URL for SEO to indicate the primary domain -->
-    <link rel="canonical" href="https://juliayao.com" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --ink: #1f2937;
+      --ink-2: #4b5563;
+      --ink-3: #6b7280;
+      --cardinal: #8B0000;
+      --gold: #FFD700;
+      --brand: linear-gradient(90deg, #8B0000, #FFD700);
+      --r1:14px; 
+      --r2:22px; 
+      --shadow-lg: 0 18px 40px rgba(17, 24, 39, .12);
+      --s1:.5rem; 
+      --s2:.75rem; 
+      --s3:1rem; 
+      --s4:1.5rem; 
+      --s5:2rem; 
+      --s6:3rem;
+      --card-w: min(980px, 92vw);
+      --speed: .35s;
+    }
 
-    <!-- JavaScript fallback in case meta refresh is not supported -->
-    <script>
-      window.location.replace("https://juliayao.com");
-    </script>
-  </head>
+    html, body {
+      height:100%;
+      margin: 0;
+      padding: 0;
+    }
 
-  <body>
-    <p>
-      Redirecting to
-      <a href="https://juliayao.com">https://juliayao.com</a>...
-    </p>
-  </body>
+    body {
+      background:var(--bg); 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      color:var(--ink); 
+      line-height:1.6
+    }
+
+    /* Hero Section Styles */
+    .hero {
+      background: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      position: relative;
+    }
+
+    .hero-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-left {
+      background: linear-gradient(135deg, #8B0000 0%, #A50000 100%);
+      color: white;
+      z-index: 2;
+      padding: 3rem 2.5rem;
+      border-radius: 32px;
+      box-shadow: 0 20px 60px rgba(139, 0, 0, 0.3);
+      border: 6px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-left h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      margin: 0 0 1.5rem 0;
+      line-height: 1.1;
+      color: white;
+    }
+
+    .hero-left .subtitle {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      margin: 0 0 2rem 0;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 600px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.875rem 1.5rem;
+      border-radius: 12px;
+      border: 2px solid transparent;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* LinkedIn Button - Blue */
+    .btn.linkedin {
+      background: #0077b5;
+      color: white;
+    }
+
+    .btn.linkedin:hover {
+      background: #005885;
+    }
+
+    /* Resume Button - White background */
+    .btn.resume {
+      background: white;
+      color: #8B0000;
+      border: 2px solid white;
+    }
+
+    .btn.resume:hover {
+      background: #f8f8f8;
+      color: #A50000;
+      border-color: #f8f8f8;
+    }
+
+    /* GitHub Button - Dark Gray */
+    .btn.github {
+      background: #24292f;
+      color: white;
+    }
+
+    .btn.github:hover {
+      background: #1a1e22;
+    }
+
+    .hero-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 500px;
+      aspect-ratio: 1;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      border: 6px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.1);
+      padding: 8px;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+
+    /* Projects Section */
+    .home-projects {
+      padding: 5rem 0;
+      background: #f8f9ff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section__title {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      color: var(--cardinal);
+      font-weight: 700;
+    }
+
+    .section__subtitle {
+      text-align: center;
+      color: var(--ink-2);
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,.06);
+      border: 1px solid rgba(139, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #8B0000, #FFD700);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(139, 0, 0, .12);
+      border-color: rgba(139, 0, 0, 0.1);
+    }
+
+    .project-image {
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-title {
+      color: var(--cardinal);
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+
+    .project-meta {
+      color: var(--ink-2);
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-description {
+      color: var(--ink);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .project-tag {
+      background: linear-gradient(135deg, rgba(139, 0, 0, 0.05), rgba(255, 215, 0, 0.05));
+      border: 1px solid rgba(139, 0, 0, 0.1);
+      padding: 0.35rem 0.85rem;
+      border-radius: 18px;
+      font-size: 0.75rem;
+      color: var(--cardinal);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      transition: all 0.2s ease;
+    }
+
+    .project-tag:hover {
+      background: rgba(139, 0, 0, 0.1);
+      border-color: var(--cardinal);
+    }
+
+    /* Project Filter Buttons */
+    .project-filters {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 0.75rem 1.75rem;
+      border: 2px solid var(--cardinal);
+      background: white;
+      color: var(--cardinal);
+      border-radius: 25px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .filter-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: var(--cardinal);
+      z-index: -1;
+      transition: left 0.3s ease;
+    }
+
+    .filter-btn:hover::before {
+      left: 0;
+    }
+
+    .filter-btn:hover {
+      color: white;
+      background: transparent;
+    }
+
+    .filter-btn.active {
+      background: var(--cardinal);
+      color: white;
+    }
+
+    .project-card {
+      animation: fadeIn 0.3s ease;
+    }
+
+    .project-card.hidden {
+      display: none;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    footer {
+      padding: 2rem 0;
+      color: var(--ink-3);
+      text-align: center;
+      background: white;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+      }
+      
+      .hero-right {
+        order: -1; /* 讓照片在文字上面 */
+      }
+      
+      .hero-left {
+        order: 1;
+        /* 手機版時保持紅色背景但調整樣式 */
+        padding: 2rem 1.5rem;
+        margin: 0 1rem;
+      }
+      
+      .hero-left h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero-actions {
+        justify-content: center;
+      }
+      
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+
+  </style>
+</head>
+
+<body>
+  <header class="header"></header>
+  <script src="components/navbar.js"></script>
+
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-left">
+        <h1>Hi, This is Julia 👩🏻‍💻</h1>
+        <div class="subtitle">
+          UIUX Designer & Researcher passionate about solving real problems through design
+        </div>
+        <div class="hero-actions">
+          <a class="btn linkedin" href="https://www.linkedin.com/in/juliayao333/" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.98 3.5a2.25 2.25 0 11.001 4.5A2.25 2.25 0 014.98 3.5zM3 8.75h4v12H3v-12zM9.75 8.75H14v1.6c.6-1 2.05-1.6 3.35-1.6 3.2 0 3.9 2 3.9 4.6v7.4h-4v-6.55c0-1.56-.03-3.57-2.35-3.57-2.35 0-2.71 1.84-2.71 3.45V21.75h-4v-13z"/>
+            </svg>
+            LinkedIn
+          </a>
+          <a class="btn resume" href="https://drive.google.com/file/d/1vvs_OoR8fpft6eY72Xvasdgzdr9kumvl/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="3" width="16" height="18" rx="2" />
+              <circle cx="12" cy="9" r="2" />
+              <path d="M8 15h8v1H8zM8 17h8v1H8z" />
+            </svg>
+            Resume
+          </a>
+          <a class="btn github" href="https://github.com/jyueanyao" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.525.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.254-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 7.844c.85.004 1.705.115 2.504.338 1.909-1.295 2.747-1.025 2.747-1.025.546 1.378.202 2.396.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.847-2.337 4.695-4.566 4.944.359.309.678.92.678 1.855 0 1.339-.012 2.421-.012 2.751 0 .268.18.579.688.481C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-image">
+          <img src="img/foutain.jpeg" alt="Julia Yao">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-projects">
+    <div class="container">
+      <h1 class="section__title">Works and Projects</h1>
+      <p class="section__subtitle">A collection of my UX/UI design projects and development work that showcase my skills in solving real-world problems</p>
+      
+      <!-- Category Filter Buttons - COMMENTED OUT
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="design">UI/UX Design Project</button>
+        <button class="filter-btn" data-filter="coding">Coding Project</button>
+      </div>
+      -->
+
+      <div class="projects-grid">
+        
+        <!-- Thrive -->
+        <a href="thrive.html" class="project-card" data-category="design">
+          <div class="project-image">
+            <img src="img/AHA/AHA red.png" alt="Thrive app mockup">
+          </div>
+          <h3 class="project-title">Thrive</h3>
+          <p class="project-meta">UIUX Designer/Researcher (Pro bono consulting) · Aug. 2025 - Present</p>
+          <p class="project-description">An interactive, AI-powered fitness and wellness app inspired by the American Heart Association's Life's Essential 8</p>
+          <div class="project-tags">
+            <span class="project-tag">UIUX Design/Researcher</span>
+            <span class="project-tag">Prototyping</span>
+            <span class="project-tag">User Journey Mapping</span>
+            <span class="project-tag">Healthcare</span>
+          </div>
+        </a>
+       
+ <!-- TechCare -->
+        <a href="techcare.html" class="project-card" data-category="design">
+          <div class="project-image">
+            <img src="img/Techcare/combine.PNG" alt="TechCare cover">
+          </div>
+          <h3 class="project-title">TechCare (Capstone Project)</h3>
+          <p class="project-meta">UIUX Designer · Researcher · Data Analyst Aug. 2020 – Dec. 2021</p>
+          <p class="project-description">UX-based solution to improve efficiency in long-term care facilities</p>
+          <div class="project-tags">
+            <span class="project-tag">AdobeXD</span>
+            <span class="project-tag">Prototyping</span>
+            <span class="project-tag">UX Research</span>
+          </div>
+        </a>
+        <!-- Recycle Go -->
+        <a href="recycle.html" class="project-card" data-category="design">
+          <div class="project-image">
+            <img src="img/Recycle.png" alt="Recycle Go cover">
+          </div>
+          <h3 class="project-title">Recycle Go</h3>
+          <p class="project-meta">UX Researcher Mar. 2022 - Sept. 2022</p>
+          <p class="project-description">Using Design Thinking to Address Packaging Waste</p>
+          <div class="project-tags">
+            <span class="project-tag">UX Research</span>
+            <span class="project-tag">Design Thinking</span>
+            <span class="project-tag">UIUX Design</span>
+          </div>
+        </a>
+
+        <!-- EasyTap -->
+        <a href="easytap.html" class="project-card" data-category="coding">
+          <div class="project-image">
+            <img src="img/EasyTap/Shoe try on.png" alt="EasyTap app mockup">
+          </div>
+          <h3 class="project-title">EasyTap</h3>
+          <p class="project-meta">UIUX Designer/Researcher · Aug. 2025 - Present</p>
+          <p class="project-description">Detachable tap dance shoes for dancer</p>
+          <div class="project-tags">
+            <span class="project-tag">Product Design</span>
+            <span class="project-tag">UIUX Design</span>
+            <span class="project-tag">User Research</span>
+          </div>
+        </a>
+
+        
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__row" id="contact">
+      <p>© <span id="year"></span> Jyue-An Yao</p>
+      <!-- <p><a href="projects.html">Projects</a> · <a href="#about">About</a></p> -->
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        var open = document.body.classList.toggle('nav-open');
+        btn.setAttribute('aria-expanded', open);
+      });
+    })();
+  </script>
+
+  <!-- Project Filter Script - COMMENTED OUT
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const filter = this.getAttribute('data-filter');
+
+          // Update active button
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+
+          // Filter project cards
+          projectCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            
+            if (filter === 'all' || category === filter) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+    });
+  </script>
+  -->
+
+  <!-- Custom Cursor Bubble Script -->
+  <script>
+    // Hide default cursor
+    document.body.style.cursor = 'none';
+
+    // Create custom cursor bubble
+    const cursorBubble = document.createElement('div');
+    cursorBubble.className = 'custom-cursor';
+    document.body.appendChild(cursorBubble);
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+      // Update cursor bubble position
+      cursorBubble.style.left = (mouseX - 10) + 'px';
+      cursorBubble.style.top = (mouseY - 10) + 'px';
+    });
+
+    // Show cursor bubble on mouse enter
+    document.addEventListener('mouseenter', () => {
+      cursorBubble.style.opacity = '1';
+    });
+
+    // Hide cursor bubble on mouse leave
+    document.addEventListener('mouseleave', () => {
+      cursorBubble.style.opacity = '0';
+    });
+  </script>
+
+</body>
+
 </html>
