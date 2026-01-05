@@ -2,14 +2,11 @@
 const createNavBar = () => {
   const navHTML = `
     <div class="container nav">
-        <a href="index.html" class="brand" style="text-decoration: none;">
-          <img src="img/griffithtop.jpeg" alt="Julia Yao" class="nav-avatar"> 
-          <span class="brand-text">Julia Yao</span>
-        </a>
+      <a href="index.html" class="brand" style="text-decoration: none;">
+        <span class="brand-text">Julia Yao</span>
+      </a>
       <nav class="nav__links" aria-label="Main navigation">
-        <a href="projects.html">Work</a>
-        <a href="portfolio.html">Art</a>
-        <a href="about.html">About</a>
+        <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
       </nav>
     </div>
   `;
