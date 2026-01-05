@@ -3,293 +3,293 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Thrive — Move More (AHA) — Project</title>
-  <meta name="description" content="Thrive — an AHA-inspired Move More app concept for Life's Essential 8.">
+  <title>Thrive - Move More (AHA) - Project</title>
+  <meta name="description" content="Thrive is an AHA-inspired Move More concept that brings Life's Essential 8 into daily routines.">
   <link rel="stylesheet" href="styles/style.css">
   <style>
     body.thrive-case {
-      background: #f3f4f6;
-      color: #1f2933;
-    }
-
-    .case-wrapper {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 4.5rem 1.5rem 6rem;
-      display: grid;
-      gap: 3rem;
-    }
-
-    .case-hero {
       background: #ffffff;
-      border-radius: 28px;
-      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
-      padding: clamp(2.5rem, 4vw, 3.5rem);
+      color: #111827;
+      font-family: var(--body-font);
+    }
+
+    .case-shell {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: clamp(4rem, 8vw, 5.5rem) clamp(1.5rem, 5vw, 3.5rem) clamp(6rem, 9vw, 7rem);
+      display: grid;
+      gap: clamp(3rem, 7vw, 4.5rem);
+    }
+
+    .hero-banner {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: clamp(2rem, 3vw, 3rem);
+      gap: clamp(1.75rem, 4vw, 3rem);
       align-items: center;
+      padding-bottom: clamp(2.5rem, 5vw, 3.5rem);
+      border-bottom: 1px solid #e5e7eb;
     }
 
-    .case-hero__media img {
-      width: 100%;
-      border-radius: 24px;
-      display: block;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
-    }
-
-    .case-hero__eyebrow {
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #475569;
-    }
-
-    .case-hero__title {
-      font-size: clamp(2.25rem, 5vw, 3.25rem);
-      line-height: 1.05;
-      margin: 0.75rem 0 1.25rem;
-      color: #1d1b51;
-      font-family: var(--heading-font);
-      letter-spacing: -0.02em;
-    }
-
-    .case-hero__summary {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #334155;
-      margin-bottom: 2rem;
-      max-width: 48ch;
-    }
-
-    .case-meta-list {
+    .hero-copy {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
+      gap: 1.15rem;
     }
 
-    .case-meta-item {
+    .hero-eyebrow {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      font-weight: 700;
+      color: #6b7280;
+    }
+
+    .hero-title {
+      margin: 0;
+      font-size: clamp(3rem, 5vw, 3.6rem);
+      font-weight: 600;
+      line-height: 1.05;
+      color: #0f172a;
+    }
+
+    .hero-summary {
+      font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+      line-height: 1.7;
+      max-width: 38ch;
+      color: #1f2937;
+    }
+
+    .hero-art img {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .case-meta-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: clamp(1.5rem, 3vw, 2.5rem);
+      padding-top: clamp(1.75rem, 4vw, 2.75rem);
+      padding-bottom: clamp(2rem, 5vw, 3rem);
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .meta-card {
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .meta-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      font-weight: 700;
+      color: #374151;
+    }
+
+    .meta-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
       display: grid;
       gap: 0.35rem;
+      font-size: 1rem;
+      color: #111827;
     }
 
-    .case-meta-label {
-      font-size: 0.75rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: #64748b;
-    }
-
-    .case-meta-value {
-      font-size: 0.95rem;
-      color: #1f2933;
-      line-height: 1.5;
+    .meta-list li span {
+      display: block;
+      font-size: 0.85rem;
+      color: #6b7280;
     }
 
     .case-section {
-      background: #ffffff;
-      border-radius: 28px;
-      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
-      padding: clamp(2.25rem, 4vw, 3.25rem);
+      padding: clamp(2.4rem, 6vw, 3.2rem) 0 clamp(2.4rem, 6vw, 3.2rem);
+      border-bottom: 1px solid #e5e7eb;
       display: grid;
-      gap: 1.75rem;
+      gap: clamp(1.3rem, 3vw, 2.2rem);
     }
 
-    .section-header {
-      display: grid;
-      gap: 0.65rem;
+    .case-section:last-of-type {
+      border-bottom: none;
     }
 
-    .section-eyebrow {
-      font-size: 0.8rem;
-      font-weight: 700;
+    .section-tag {
+      font-size: 0.72rem;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: #76819a;
+      letter-spacing: 0.28em;
+      font-weight: 700;
+      color: #6b7280;
     }
 
     .section-title {
-      font-size: clamp(1.75rem, 4vw, 2.4rem);
-      letter-spacing: -0.015em;
-      color: #1d1b51;
       margin: 0;
+      font-size: clamp(1.9rem, 4.5vw, 2.7rem);
+      line-height: 1.1;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .section-lead {
+      font-size: clamp(1.05rem, 2.1vw, 1.22rem);
+      line-height: 1.7;
+      color: #1f2937;
+      max-width: 68ch;
     }
 
     .section-body {
       display: grid;
-      gap: 1rem;
-      font-size: 1.05rem;
+      gap: 1.1rem;
+      font-size: 1rem;
       line-height: 1.7;
-      color: #374151;
+      color: #1f2937;
     }
 
-    .section-body ul {
-      padding-left: 1.35rem;
+    .section-body p {
       margin: 0;
     }
 
-    .section-body li + li {
-      margin-top: 0.4rem;
-    }
-
-    .reason-list {
-      list-style: none;
+    .section-list {
+      list-style: disc;
+      padding-left: 1.5rem;
       margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 1.25rem;
-    }
-
-    .reason-list li {
-      background: #f1f5f9;
-      border-left: 4px solid #1d1b51;
-      border-radius: 18px;
-      padding: 1.1rem 1.4rem;
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
-    }
-
-    .reason-label {
-      display: block;
-      font-size: 0.78rem;
-      letter-spacing: 0.24em;
-      font-weight: 700;
-      color: #1d1b51;
-      text-transform: uppercase;
-    }
-
-    .reason-detail {
-      display: block;
-      margin-top: 0.55rem;
-      font-size: 1.05rem;
-      line-height: 1.65;
-      color: #374151;
-    }
-
-    .callout {
-      background: #f8fafc;
-      border-left: 4px solid #6366f1;
-      padding: 1.1rem 1.25rem;
-      border-radius: 12px;
-      color: #312e81;
-    }
-
-    .case-divider {
-      height: 1px;
-      background: linear-gradient(90deg, rgba(148, 163, 184, 0), rgba(148, 163, 184, 0.5), rgba(148, 163, 184, 0));
-      border: none;
-    }
-
-    .case-aside {
       display: grid;
       gap: 0.5rem;
-      justify-items: start;
     }
 
-    .case-aside__tag {
-      font-size: 0.75rem;
-      letter-spacing: 0.25em;
+    .insight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: clamp(1.25rem, 3vw, 2.2rem);
+    }
+
+    .insight-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: clamp(1.4rem, 3.2vw, 2rem);
+      display: grid;
+      gap: 0.75rem;
+      background: #ffffff;
+    }
+
+    .insight-card h3 {
+      margin: 0;
+      font-size: 1.15rem;
+      color: #0f172a;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: clamp(1.25rem, 3vw, 2.2rem);
+    }
+
+    .feature-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: clamp(1.4rem, 3.2vw, 2rem);
+      display: grid;
+      gap: 0.75rem;
+      background: #ffffff;
+    }
+
+    .feature-meta {
+      font-size: 0.72rem;
       text-transform: uppercase;
+      letter-spacing: 0.26em;
+      color: #6b7280;
       font-weight: 700;
-      color: #9ca3af;
     }
 
-    .case-aside__text {
+    .feature-title {
+      margin: 0;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .feature-note {
       font-size: 0.95rem;
-      color: #475569;
+      color: #1f2937;
       line-height: 1.6;
     }
 
-    .case-grid-two {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.75rem;
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.75rem;
-    }
-
-    .process-card {
-      background: #f8fafc;
-      border-radius: 22px;
-      border: 1px solid rgba(15, 23, 42, 0.08);
-      box-shadow: 0 18px 38px rgba(15, 23, 42, 0.08);
-      padding: 1.65rem;
-      display: grid;
-      gap: 0.9rem;
-    }
-
-    .process-problem {
-      font-size: 0.75rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: #1d1b51;
-    }
-
-    .process-feature {
-      font-family: "Manrope", sans-serif;
-      font-weight: 700;
-      color: #111827;
-      font-size: 1.1rem;
-      letter-spacing: -0.01em;
-    }
-
-    .process-evidence {
-      font-size: 0.98rem;
-      line-height: 1.6;
-      color: #374151;
-    }
-
-    .process-quote {
+    .feature-quote {
       font-size: 0.92rem;
       line-height: 1.55;
-      color: #4b5563;
-      background: #fff;
-      border-left: 3px solid #1d1b51;
-      padding: 0.75rem 1rem;
-      border-radius: 14px;
+      color: #374151;
+      background: #f9fafb;
+      border-left: 3px solid #111827;
+      padding: 0.8rem 1rem;
+      border-radius: 12px;
       font-style: italic;
     }
 
-    .case-nav-links {
+    .section-media {
+      margin-top: 1.5rem;
+      display: grid;
+      gap: clamp(1.5rem, 4vw, 2.5rem);
+    }
+
+    .section-media img {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .case-pagination {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-top: clamp(2.4rem, 6vw, 3rem);
+      border-top: 1px solid #e5e7eb;
     }
 
-    .nav-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.85rem 1.5rem;
-      border-radius: 12px;
+    .case-pagination__link {
+      flex: 1 1 260px;
       text-decoration: none;
-      background: #1d1b51;
-      color: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 1.25rem 1.5rem;
+      display: grid;
+      gap: 0.35rem;
+      background: #ffffff;
+      color: #111827;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .case-pagination__link:hover {
+      background: #f3f4f6;
+      border-color: #cbd5f5;
+    }
+
+    .case-pagination__label {
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #6b7280;
+    }
+
+    .case-pagination__name {
+      font-size: 1.2rem;
       font-weight: 600;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      color: #111827;
     }
 
-    .nav-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(29, 27, 81, 0.18);
+    .case-pagination__note {
+      font-size: 0.9rem;
+      color: #4b5563;
     }
 
-    @media (max-width: 768px) {
-      .case-nav-links {
-        flex-direction: column;
-        align-items: stretch;
+    @media (max-width: 720px) {
+      .case-shell {
+        padding: clamp(3rem, 10vw, 4rem) clamp(1rem, 6vw, 1.75rem) clamp(5rem, 12vw, 6rem);
       }
 
-      .nav-btn {
-        justify-content: center;
+      .hero-summary {
+        max-width: none;
       }
     }
   </style>
@@ -298,218 +298,138 @@
   <header class="header"></header>
   <script src="components/navbar.js"></script>
 
-
-
-  <main class="case-wrapper">
-    <article class="case-hero" id="top">
-      <figure class="case-hero__media">
-        <img src="./img/AHA/New Thrive.png" alt="Thrive app hero screens">
-      </figure>
-      <div class="case-hero__content">
-        <p class="case-hero__eyebrow">American Heart Association</p>
-        <h1 class="case-hero__title">Turning heart-healthy science into daily habits</h1>
-        <p class="case-hero__summary">Thrive is an AI-powered, gamified wellness companion designed to translate evidence-based guidelines into small, sustainable actions that help people move more and live healthier.</p>
-        <div class="case-meta-list">
-          <div class="case-meta-item">
-            <span class="case-meta-label">Timeline</span>
-            <span class="case-meta-value">Aug 2025 – Present<br>4+ months in progress</span>
-          </div>
-          <div class="case-meta-item">
-            <span class="case-meta-label">Team</span>
-            <span class="case-meta-value">3 cross-functional consultants</span>
-          </div>
-          <div class="case-meta-item">
-            <span class="case-meta-label">My Role</span>
-            <span class="case-meta-value">UI Designer · UX Researcher</span>
-          </div>
-          <div class="case-meta-item">
-            <span class="case-meta-label">Focus</span>
-            <span class="case-meta-value">User research · Prototyping · Journey mapping · Healthcare UX</span>
-          </div>
-        </div>
+  <main class="case-shell">
+    <section class="hero-banner" id="top">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">American Heart Association</p>
+        <h1 class="hero-title">Thrive</h1>
+        <p class="hero-summary">Turning heart-healthy science into daily habits.</p>
       </div>
-    </article>
-
-    <section id="context" class="case-section">
-      <div class="section-header">
-        <h2 class="section-title">Less than half of U.S. adults meet weekly activity guidelines, sustaining preventable disease risk.</h2>
-      </div>
-      <div class="section-body">
-        <p>This gap compounds existing health inequities by leaving communities without approachable guidance that fits real day-to-day routines. Sedentary habits continue not because people lack data, but because support rarely maps to their lived experience.</p>
+      <div class="hero-art">
+        <img src="img/AHA/New Thrive.png" alt="Thrive app hero screens">
       </div>
     </section>
 
-    <hr class="case-divider">
+    <section class="case-meta-row">
+      <article class="meta-card">
+        <p class="meta-label">Timeline</p>
+        <ul class="meta-list">
+          <li>Aug 2025 - Present<span>4+ months in progress</span></li>
+        </ul>
+      </article>
+      <article class="meta-card">
+        <p class="meta-label">My Role</p>
+        <ul class="meta-list">
+          <li>UI Designer</li>
+          <li>UX Researcher</li>
+        </ul>
+      </article>
+      <article class="meta-card">
+        <p class="meta-label">Focus</p>
+        <ul class="meta-list">
+          <li>Behavioral design</li>
+          <li>Journey mapping</li>
+          <li>Healthcare UX</li>
+        </ul>
+      </article>
+    </section>
 
     <section id="problem" class="case-section">
-      <div class="section-header">
-        <p class="section-eyebrow">Problem</p>
-        <h2 class="section-title">Tracking alone does not help people build lasting heart-healthy habits.</h2>
-      </div>
+      <span class="section-tag">Problem</span>
+      <h2 class="section-title">Less than half of American adults complete recommended weekly activity.</h2>
+      <p class="section-lead">Sedentary routines compound cardiovascular risk, even for communities that understand the stakes.</p>
       <div class="section-body">
-        <p>Most wellness apps excel at data collection but stop short of motivating sustained change. Dashboards and streaks rarely address the friction that undermines follow-through once novelty fades.</p>
-        <p>Our research confirmed that persistently low activity levels stem from entrenched behavioral barriers—not a lack of information. Users need coaching that flexes with their routines, clarifies why metrics matter, and rewards incremental wins.</p>
+        <p>CDC data shows sustained inactivity keeps people on the path toward preventable disease. Interviews confirmed that even motivated adults rarely turn numbers into action when daily life gets in the way.</p>
       </div>
     </section>
-
-    <hr class="case-divider">
+ <section id="solution" class="case-section">
+      <span class="section-tag">Solutions</span>
+      <!-- <h2 class="section-title">Thrive reframes movement as an adaptive, rewarding journey.</h2> -->
+      <div class="section-media">
+        <img src="img/AHA/Solution/AI Coach color.png" alt="AI Coach presentation slide" loading="lazy">
+        <img src="img/AHA/Solution/Community color.png" alt="Community feature presentation slide" loading="lazy">
+        <img src="img/AHA/Solution/Reward color.png" alt="Reward system presentation slide" loading="lazy">
+      </div>
+    </section>
 
     <section id="research" class="case-section">
-      <div class="section-header">
-        <p class="section-eyebrow">Research Highlights</p>
-        <h2 class="section-title">Behavior science and interviews revealed three persistent blockers.</h2>
-      </div>
-      <div class="section-body">
-        <p>We paired literature reviews and competitive analysis with interviews across community fitness programs to understand why motivation collapses.</p>
-        <ul class="reason-list">
-          <li>
-            <span class="reason-label">REASON 01 · MOTIVATION COLLAPSES WITHOUT PERSONAL FEEDBACK</span>
-            <span class="reason-detail">Motivation drops sharply after the first two weeks when feedback feels generic.</span>
-          </li>
-          <li>
-            <span class="reason-label">REASON 02 · LOW HEALTH LITERACY BLOCKS ACTION</span>
-            <span class="reason-detail">Limited health literacy makes it hard to translate metrics into meaningful action.</span>
-          </li>
-          <li>
-            <span class="reason-label">REASON 03 · RIGID PLANS CAN'T ADAPT TO REAL LIFE</span>
-            <span class="reason-detail">Rigid plans ignore fluctuating energy, schedules, and physical limitations.</span>
-          </li>
-        </ul>
-        <p>These findings reframed Thrive as more than an activity tracker; it needed to become a coach that adapts, explains, and celebrates.</p>
+      <span class="section-tag">Research</span>
+      <h2 class="section-title">Behavior science and interviews revealed three blockers to lasting change.</h2>
+      <p class="section-lead">We combined literature review, competitive audits, and community interviews to understand why motivation collapses after the early wins.</p>
+      <div class="insight-grid">
+        <article class="insight-card">
+          <h3>1. Lack of motivation</h3>
+          <p>Motivation dropped after week two whenever Thrive felt like a generic tracker instead of a coach.</p>
+        </article>
+        <article class="insight-card">
+          <h3>Reason 02: Literacy gaps stall progress</h3>
+          <p>Limited health literacy made metrics feel abstract; participants asked for concrete translation into daily movement.</p>
+        </article>
+        <article class="insight-card">
+          <h3>Reason 03: Rigid plans break in real life</h3>
+          <p>Schedules, energy, and physical limitations change constantly, leaving one-size plans abandoned.</p>
+        </article>
       </div>
     </section>
-
-    <hr class="case-divider">
 
     <section id="insight" class="case-section">
-      <div class="section-header">
-        <p class="section-eyebrow">Insight</p>
-        <h2 class="section-title">Confidence grows when people see how small actions compound.</h2>
-      </div>
+      <span class="section-tag">Insight</span>
+      <h2 class="section-title">Accountability partners and adaptive coaching keep momentum alive.</h2>
+      <p class="section-lead">When people see how small actions stack into heart-health impact, confidence and follow-through rise.</p>
       <div class="section-body">
-        <p>The core opportunity was to connect daily decisions with cardiovascular impact. When participants understood why a prompt mattered—and how to adjust it—they maintained momentum.</p>
-        <div class="callout">Behavior change sticks when guidance is adaptive, affirming, and framed around achievable wins instead of perfection.</div>
+        <p>Behavior change sticks when guidance is adaptive, affirming, and framed around achievable wins instead of perfection.</p>
       </div>
     </section>
-
-    <hr class="case-divider">
 
     <section id="how-might-we" class="case-section">
-      <div class="section-header">
-        <p class="section-eyebrow">Design Question</p>
-        <h2 class="section-title">How might we translate clinical guidance into repeatable daily actions people actually want to do?</h2>
-      </div>
-      <div class="section-body">
-        <p>We framed every iteration against this question to prevent feature creep and keep the product grounded in behavior science.</p>
-      </div>
+      <span class="section-tag">Design Question</span>
+      <h2 class="section-title">How might we turn clinical guidance into repeatable, rewarding routines?</h2>
+      <p class="section-lead">This question anchored every iteration to avoid feature creep and keep the product grounded in evidence.</p>
     </section>
 
-    <hr class="case-divider">
-
-    <section id="solution" class="case-section">
-      <div class="section-header">
-        <p class="section-eyebrow">Solution Overview</p>
-        <h2 class="section-title">Thrive reframes movement as an adaptive, rewarding journey.</h2>
-      </div>
-      <div class="section-body">
-        <p>We mapped each validated barrier directly to a feature response and grounded the decision in published evidence so stakeholders could see exactly why Thrive works.</p>
-        <div class="process-grid">
-          <div class="process-card">
-            <span class="process-problem">PROBLEM 01 · LACK OF MOTIVATION &amp; SUSTAINED ENGAGEMENT</span>
-            <span class="process-feature">Feature: Gamification &amp; reward loops</span>
-            <p class="process-evidence">Systematic reviews show gamified interventions drive small-to-moderate increases in physical activity (Hedges’ g ≈ 0.42) and repeatedly report significant lifts in engagement, motivation, and participation.</p>
-            <p class="process-quote">“Gamification significantly enhances user motivation to sustain physical activity, with meta-analyses showing meaningful effect sizes on long-term behavior change.”</p>
-          </div>
-          <div class="process-card">
-            <span class="process-problem">PROBLEM 02 · LOW HEALTH LITERACY &amp; UNCLEAR GUIDELINES</span>
-            <span class="process-feature">Feature: Contextual education &amp; movement reframing</span>
-            <p class="process-evidence">Behavior change research confirms that goal setting, feedback, action planning, and knowledge shaping help people understand what counts as effective movement.</p>
-            <p class="process-quote">Transparent, plain-language visuals build self-efficacy by showing exactly what “healthy” looks like each day.</p>
-          </div>
-          <div class="process-card">
-            <span class="process-problem">PROBLEM 03 · ONE-SIZE-FITS-ALL PLANS FAIL</span>
-            <span class="process-feature">Feature: Personalized &amp; adaptive plans</span>
-            <p class="process-evidence">The Behavior Change Wheel highlights personalized action planning and adaptive content as drivers of behavior maintenance. Reviews also tie self-regulation, autonomy, and relevance to higher retention.</p>
-            <p class="process-quote">Tailored plans increase perceived relevance and self-regulation—two of the strongest predictors of sustained mobile health app usage.</p>
-          </div>
-          <div class="process-card">
-            <span class="process-problem">PROBLEM 04 · TIME &amp; LIFESTYLE CONSTRAINTS</span>
-            <span class="process-feature">Feature: Context-aware nudges &amp; flexible timing</span>
-            <p class="process-evidence">Persistence studies identify logistical constraints—especially lack of time—as the main reason users abandon fitness apps. Context awareness and adaptive recommendations reduce friction and keep daily micro-actions on the record.</p>
-            <p class="process-quote">Flexible tracking windows and adaptive reminders honor real routines, a core principle for improving adherence over the long term.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="case-divider">
-
+   
     <section id="iterations" class="case-section">
-      <div class="section-header">
-        <p class="section-eyebrow">Iteration</p>
-        <h2 class="section-title">From novelty-driven gamification to sustained behavior change.</h2>
-      </div>
+      <span class="section-tag">Iterations</span>
+      <h2 class="section-title">From novelty-driven gamification to sustained behavior change.</h2>
       <div class="section-body">
-        <div class="case-grid-two">
-          <div>
-            <h3>Version 1 — Flashy but fleeting</h3>
-            <p>The initial prototype leaned on gamified streaks. Early engagement was high, yet motivation dropped as rewards felt disconnected from users’ daily realities.</p>
-          </div>
-          <div>
-            <h3>Version 2 — Guided retention loops</h3>
-            <p>We rebuilt the journey around reinforcement schedules, contextual tips, and social accountability. The experience now guides users through right-sized goals that adapt weekly.</p>
-          </div>
-        </div>
+        <p><strong>Version 1 - Flashy but fleeting.</strong> Early prototypes leaned on streaks and badges, but motivation tanked after the honeymoon period.</p>
+        <p><strong>Version 2 - Guided retention loops.</strong> We rebuilt reinforcement schedules, layered contextual coaching, and introduced social accountability to extend engagement.</p>
       </div>
     </section>
-
-    <hr class="case-divider">
 
     <section id="final-design" class="case-section">
-      <div class="section-header">
-        <p class="section-eyebrow">Final Experience</p>
-        <h2 class="section-title">A cohesive companion for daily heart health.</h2>
-      </div>
+      <span class="section-tag">Final Experience</span>
+      <h2 class="section-title">A cohesive companion for daily heart health.</h2>
       <div class="section-body">
-        <ul>
-          <li>Personalized guidance that updates with every check-in and movement log.</li>
-          <li>Health overviews that connect sleep, vitals, and activity into one story.</li>
-          <li>Reward systems that reinforce consistent effort rather than perfection.</li>
-          <li>Community journeys that transform progress into a shared experience.</li>
+        <ul class="section-list">
+          <li>Personalized guidance updates with every check-in and movement log.</li>
+          <li>Health overviews connect sleep, vitals, and activity into one story.</li>
+          <li>Reward systems reinforce consistent effort instead of perfection.</li>
+          <li>Community journeys transform progress into a shared experience.</li>
         </ul>
-        <p>Each component maps directly to the research-backed barriers identified earlier, closing the loop between insight and implementation.</p>
       </div>
     </section>
-
-    <hr class="case-divider">
 
     <section id="deliverables" class="case-section">
-      <div class="section-header">
-        <p class="section-eyebrow">Deliverables</p>
-        <h2 class="section-title">Everything packaged for stakeholder review.</h2>
-      </div>
-      <div class="section-body">
-        <p>High-fidelity Figma prototypes, a behavioral design style guide, and workshop-ready presentation decks are prepared for the next round of validation.</p>
-      </div>
+      <span class="section-tag">Deliverables</span>
+      <h2 class="section-title">Everything packaged for stakeholder review.</h2>
+      <p class="section-lead">High-fidelity prototypes, a behavioral design style guide, and workshop-ready storytelling decks support the next validation round.</p>
     </section>
-
-    <hr class="case-divider">
 
     <section id="reflections" class="case-section">
-      <div class="section-header">
-        <p class="section-eyebrow">Reflection</p>
-        <h2 class="section-title">Evidence-based design turns guidelines into lived routines.</h2>
-      </div>
+      <span class="section-tag">Reflection</span>
+      <h2 class="section-title">Evidence-based design turns guidelines into lived routines.</h2>
       <div class="section-body">
-        <p>This project reinforced that effective health products depend more on motivation, accessibility, and sustainability than on perfect data accuracy.</p>
-        <p>Grounding decisions in research—rather than assumption—showed how UX strategy can translate public health insights into daily behavior change.</p>
+        <p>Thrive reinforced that health products succeed when they respect motivation, accessibility, and sustainability, not just data accuracy.</p>
+        <p>Grounding every decision in research showed stakeholders how UX strategy translates public health insight into daily behavior change.</p>
       </div>
     </section>
 
-    <div class="case-nav-links">
-      <a class="nav-btn" href="recycle.html">← Previous Project</a>
-      <a class="nav-btn" href="easytap.html">Next Project →</a>
-    </div>
+    <nav class="case-pagination" aria-label="Project navigation">
+      <a class="case-pagination__link" href="index.html">
+        <span class="case-pagination__name">View All Projects</span>
+      </a>
+    </nav>
   </main>
 
   <footer class="footer">

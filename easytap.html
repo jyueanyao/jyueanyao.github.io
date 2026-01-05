@@ -22,74 +22,78 @@
       }
     }
 
-    /* Case Study Layout with Left Navigation */
-    .case-study-container {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 3rem;
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 2rem;
-    }
-    
-    .case-nav {
-      position: sticky;
-      top: 100px;
-      height: fit-content;
-    }
-    
-    .case-nav h3 {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #6b7280;
-      margin-bottom: 1rem;
-    }
-    
-    .case-nav ul {
-      list-style: none;
-      padding: 0;
+    .case-page {
+      width: 100%;
       margin: 0;
+      padding: 0 0 5rem;
+      background: #f6f5ff;
     }
-    
-    .case-nav li {
-      margin-bottom: 0.75rem;
+
+    .hero-full {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background: linear-gradient(180deg, #f5f4ff 0%, rgba(255, 255, 255, 0.4) 100%);
+      padding: clamp(3rem, 8vw, 6rem) clamp(2rem, 9vw, 6.5rem);
     }
-    
-    .case-nav a {
-      text-decoration: none;
-      color: #1f2937;
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: color 0.2s;
-      display: block;
-      padding: 0.25rem 0;
+
+    .hero-right {
+      width: min(1100px, 100%);
     }
-    
-    .case-nav a:hover,
-    .case-nav a.active {
-      color: #C41E3A;
+
+    .hero-right img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 28px 60px rgba(30, 41, 59, 0.18);
     }
-    
+
+    .case-study-container {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .case-content {
+      display: grid;
+      gap: 0;
+    }
+
     .case-content section {
-      margin-bottom: 4rem;
+      width: 100%;
+      margin: 0;
+      padding: clamp(3rem, 8vw, 5rem) 0;
+      background: linear-gradient(180deg, rgba(110, 104, 255, 0.08) 0%, rgba(255, 255, 255, 0.85) 100%);
       scroll-margin-top: 100px;
     }
-    
+
+    .case-content section:nth-of-type(even) {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(110, 104, 255, 0.06) 100%);
+    }
+
+    .section-inner {
+      width: min(1100px, 92vw);
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 28px;
+      padding: clamp(2.5rem, 5vw, 3.75rem);
+      box-shadow: 0 28px 60px rgba(15, 23, 42, 0.12);
+      display: grid;
+      gap: clamp(1.5rem, 4vw, 2.5rem);
+    }
+
+    .section-inner h2 {
+      margin: 0;
+    }
+
     @media (max-width: 768px) {
-      .case-study-container {
-        grid-template-columns: 1fr;
+      .hero-full {
+        padding: clamp(2.5rem, 12vw, 4.5rem) clamp(1.5rem, 8vw, 3rem);
       }
-      
-      .case-nav {
-        position: static;
-        margin-bottom: 2rem;
-      }
-      
-      .case-nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
+
+      .section-inner {
+        border-radius: 20px;
+        padding: clamp(2rem, 8vw, 3rem);
       }
     }
   </style>
@@ -98,12 +102,10 @@
   <header class="header"></header>
   <script src="components/navbar.js"></script>
 
-  <main class="container">
+  <main class="case-page">
     <section class="hero-full">
       <div class="hero-right">
-        <div style="margin: 2rem 0;">
-          <img src="img/EasyTap/Shoe try on.png" alt="EasyTap Product Mockup" style="max-width: 100%; height: auto; border-radius: 12px;">
-        </div>
+        <img src="img/EasyTap/Shoe try on.png" alt="EasyTap Product Mockup">
       </div>
     </section>
 
@@ -154,100 +156,113 @@
 
         <div class="case-content">
           <section id="overview">
-            <h2>Overview</h2>
-            <div class="impact-grid" style="margin: 2rem 0;">
-              <div>
-                <h3 style="color: var(--heading-color); font-family: var(--sf-font);">Impact — For Dancers</h3>
-                <ul style="color: var(--text-color);">
-                  <li>Reduced financial burden on tap dancing</li>
-                  <li>Increased flexibility in shoe choices</li>
-                  <li>Better portability for travel and training</li>
-                  <li>Access to quality tap dancing for more people</li>
-                </ul>
-              </div>
-              <div>
-                <h3 style="color: var(--heading-color); font-family: var(--sf-font);">Impact — For the Industry</h3>
-                <ul style="color: var(--text-color);">
-                  <li>More accessible tap dancing to wider audience</li>
-                  <li>Innovative approach to traditional product</li>
-                  <li>Growing market for affordable solutions</li>
-                </ul>
+            <div class="section-inner">
+              <h2>Overview</h2>
+              <div class="impact-grid">
+                <div>
+                  <h3 style="color: var(--heading-color); font-family: var(--sf-font);">Impact — For Dancers</h3>
+                  <ul style="color: var(--text-color);">
+                    <li>Reduced financial burden on tap dancing</li>
+                    <li>Increased flexibility in shoe choices</li>
+                    <li>Better portability for travel and training</li>
+                    <li>Access to quality tap dancing for more people</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 style="color: var(--heading-color); font-family: var(--sf-font);">Impact — For the Industry</h3>
+                  <ul style="color: var(--text-color);">
+                    <li>More accessible tap dancing to wider audience</li>
+                    <li>Innovative approach to traditional product</li>
+                    <li>Growing market for affordable solutions</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </section>
 
           <section id="research">
-            <h2>Research</h2>
-            <p>
-              Dancers face challenges with traditional tap shoes: high cost, difficulty in transportation, and the burden of carrying multiple pairs. Many dancers wish for a more flexible, cost-effective solution that doesn't compromise on performance.
-            </p>
+            <div class="section-inner">
+              <h2>Research</h2>
+              <p>
+                Dancers face challenges with traditional tap shoes: high cost, difficulty in transportation, and the burden of carrying multiple pairs. Many dancers wish for a more flexible, cost-effective solution that doesn't compromise on performance.
+              </p>
+            </div>
           </section>
 
           <section id="ideation">
-            <h2>Ideation</h2>
-            <p>
-              <strong style="color: #0052a3;">How might we</strong> create an affordable, portable tap shoe solution that enables dancers to reduce costs and carrying burden while maintaining performance quality?
-            </p>
+            <div class="section-inner">
+              <h2>Ideation</h2>
+              <p>
+                <strong style="color: #0052a3;">How might we</strong> create an affordable, portable tap shoe solution that enables dancers to reduce costs and carrying burden while maintaining performance quality?
+              </p>
+            </div>
           </section>
 
           <section id="solution">
-            <h2>Solution</h2>
-            <p>
-              <strong style="color: #8B0000;">EasyTap</strong> is a detachable tap shoe system that allows dancers to convert regular dance shoes into tap shoes, reducing cost and carrying burden while providing professional-grade performance.
-            </p>
+            <div class="section-inner">
+              <h2>Solution</h2>
+              <p>
+                <strong style="color: #8B0000;">EasyTap</strong> is a detachable tap shoe system that allows dancers to convert regular dance shoes into tap shoes, reducing cost and carrying burden while providing professional-grade performance.
+              </p>
 
-            <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin: 2rem 0; position: relative;">
-              <div style="position: relative; min-height: 300px; display: flex; align-items: center; justify-content: center;">
-                <div class="persona-slide" id="persona-1" style="position: absolute; width: 70%; opacity: 1; transition: opacity 0.5s ease;">
-                  <img src="img/EasyTap/EasytapPersona1.png" alt="EasyTap Persona 1" style="max-width: 100%; height: auto; border-radius: 12px;">
+              <div class="persona-gallery">
+                <div class="persona-stage">
+                  <div class="persona-slide is-active" id="persona-1">
+                    <img src="img/EasyTap/EasytapPersona1.png" alt="EasyTap Persona 1">
+                  </div>
+                  <div class="persona-slide" id="persona-2">
+                    <img src="img/EasyTap/EasyTapPersona2.png" alt="EasyTap Persona 2">
+                  </div>
+                  <button class="persona-nav-btn" type="button" onclick="prevPersona()">‹</button>
+                  <button class="persona-nav-btn" type="button" onclick="nextPersona()">›</button>
                 </div>
-                <div class="persona-slide" id="persona-2" style="position: absolute; width: 70%; opacity: 0; transition: opacity 0.5s ease;">
-                  <img src="img/EasyTap/EasyTapPersona2.png" alt="EasyTap Persona 2" style="max-width: 100%; height: auto; border-radius: 12px;">
+                <div class="persona-dots">
+                  <span class="persona-dot active" onclick="showPersona(1)" id="dot-1"></span>
+                  <span class="persona-dot" onclick="showPersona(2)" id="dot-2"></span>
                 </div>
-                <button class="persona-nav-btn" onclick="prevPersona()" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(255, 255, 255, 0.85); color: #333; border: none; padding: 12px 16px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; z-index: 10; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; transition: background 0.3s ease;">‹</button>
-                <button class="persona-nav-btn" onclick="nextPersona()" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(255, 255, 255, 0.85); color: #333; border: none; padding: 12px 16px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; z-index: 10; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; transition: background 0.3s ease;">›</button>
               </div>
-              <div style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem;">
-                <span class="persona-dot" onclick="showPersona(1)" style="width: 12px; height: 12px; border-radius: 50%; background: #C41E3A; cursor: pointer; transition: all 0.3s ease;" id="dot-1"></span>
-                <span class="persona-dot" onclick="showPersona(2)" style="width: 12px; height: 12px; border-radius: 50%; background: #e5e7eb; cursor: pointer; transition: all 0.3s ease;" id="dot-2"></span>
+
+              <section>
+                <h3>Key Features</h3>
+                <div style="display: grid">
+                  <div>
+                    <ul class="cols">
+                      <li><strong>Detachable Design</strong> — easily attach and detach tap soles</li>
+                      <li><strong>Cost-Effective</strong> — reduce investment in multiple tap shoes</li>
+                      <li><strong>Lightweight</strong> — portable and easy to carry</li>
+                      <li><strong>Professional Sound</strong> — high-quality tap performance</li>
+                      <li><strong>Universal Compatibility</strong> — works with various dance shoes</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h3>Design Approach</h3>
+                <p>
+                  The design prioritizes accessibility and affordability while maintaining the performance quality that professional and amateur dancers expect. Every detail was considered to balance functionality, cost, and user experience.
+                </p>
+              </section>
+
+              <section>
+                <h3>Sketches</h3>
+                <div class="section-image">
+                  <img src="img/EasyTap/EasyTap.png" alt="EasyTap Features">
+                </div>
+              </section>
+
+              <section>
+                <h3>Illustrator Colorway</h3>
+                <div class="section-image">
+                  <img src="img/EasyTap/illustrator.png" alt="EasyTap Features">
+                </div>
+              </section>
+
+              <div class="project-nav">
+                <a href="recycle.html" class="nav-btn nav-btn--prev">← Previous</a>
+                <a href="thrive.html" class="nav-btn nav-btn--next">Next →</a>
               </div>
             </div>
-
-            <section>
-              <h3>Key Features</h3>
-              <div style="display: grid">
-                <div>
-                  <ul class="cols">
-                    <li><strong>Detachable Design</strong> — easily attach and detach tap soles</li>
-                    <li><strong>Cost-Effective</strong> — reduce investment in multiple tap shoes</li>
-                    <li><strong>Lightweight</strong> — portable and easy to carry</li>
-                    <li><strong>Professional Sound</strong> — high-quality tap performance</li>
-                    <li><strong>Universal Compatibility</strong> — works with various dance shoes</li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <h3>Design Approach</h3>
-              <p>
-                The design prioritizes accessibility and affordability while maintaining the performance quality that professional and amateur dancers expect. Every detail was considered to balance functionality, cost, and user experience.
-              </p>
-            </section>
-
-            <section>
-              <h3>Sketches</h3>
-              <div style="margin: 0;">
-                <img src="img/EasyTap/EasyTap.png" alt="EasyTap Features" style="max-width: 100%; height: auto; border-radius: 12px;">
-              </div>
-            </section>
-
-            <section>
-              <h3>Illustrator Colorway</h3>
-              <div style="margin: 0;">
-                <img src="img/EasyTap/illustrator.png" alt="EasyTap Features" style="max-width: 100%; height: auto; border-radius: 12px;">
-              </div>
-            </section>
           </section>
         </div>
       </div>
@@ -282,11 +297,17 @@
     }
 
     function updatePersonaDisplay() {
-      document.getElementById('persona-1').style.opacity = currentPersona === 1 ? '1' : '0';
-      document.getElementById('persona-2').style.opacity = currentPersona === 2 ? '1' : '0';
-      document.getElementById('dot-1').style.background = currentPersona === 1 ? '#C41E3A' : '#e5e7eb';
-      document.getElementById('dot-2').style.background = currentPersona === 2 ? '#C41E3A' : '#e5e7eb';
+      const slides = document.querySelectorAll('.persona-slide');
+      const dots = document.querySelectorAll('.persona-dot');
+      slides.forEach((slide, index) => {
+        slide.classList.toggle('is-active', index === currentPersona - 1);
+      });
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentPersona - 1);
+      });
     }
+
+    updatePersonaDisplay();
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('.case-nav a').forEach(link => {
@@ -320,33 +341,172 @@
     });
   </script>
   <style>
-    .case {max-width: 960px; margin: 0 auto; padding: 24px;}
-    .hero {text-align: center; margin-bottom: 24px;}
-    .hero h1 {font-size: 2rem; margin: 0 0 8px; font-family: var(--sf-font); color: var(--heading-color);}
-    .subtitle {color: var(--text-color); margin: 0 auto 8px; max-width: 720px; font-family: var(--sf-font);}
-    .meta.grid {display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 12px; margin: 16px 0 24px;}
-    
-    /* H2 styles - now using global settings */
+    .case {
+      width: min(1100px, 92vw);
+      margin: clamp(-6rem, -12vw, -4rem) auto clamp(3rem, 7vw, 5rem);
+      padding: clamp(2.5rem, 5vw, 3.75rem);
+      background: #ffffff;
+      border-radius: 32px;
+      box-shadow: 0 34px 70px rgba(15, 23, 42, 0.16);
+      display: grid;
+      gap: clamp(2rem, 5vw, 3.25rem);
+    }
+
+    .case h1 {
+      font-size: clamp(2.5rem, 6vw, 3.75rem);
+      margin: 0 0 1rem;
+      font-family: var(--sf-font);
+      color: var(--heading-color);
+    }
+
+    .case p {
+      font-size: 1.05rem;
+    }
+
     h2 {
-      margin-top: 28px; 
-      font-size: 1.4rem; 
+      font-size: clamp(1.6rem, 4vw, 2.1rem);
       color: var(--heading-color);
       font-family: var(--sf-font);
       font-weight: 700;
       letter-spacing: -0.02em;
     }
-    
-    /* Body text styles - black color */
+
     p, li, div, span {
       font-family: var(--sf-font);
       color: var(--text-color);
     }
-    
-    h3 {margin-top: 12px; font-size: 1.1rem; font-family: var(--sf-font); color: var(--heading-color);}
-    ul {padding-left: 18px;}
-    .cols {columns: 2; column-gap: 24px;}
-    .impact-grid {display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 16px;}
-    @media (max-width: 640px){ .cols {columns: 1;} }
+
+    h3 {
+      margin: 0;
+      font-size: clamp(1.15rem, 3vw, 1.4rem);
+      font-family: var(--sf-font);
+      color: var(--heading-color);
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 1rem 0 0;
+    }
+
+    .cols {
+      columns: 2;
+      column-gap: 24px;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: clamp(1.5rem, 4vw, 2.5rem);
+    }
+
+    .persona-gallery {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .persona-stage {
+      position: relative;
+      min-height: clamp(320px, 40vw, 460px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .persona-slide {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: min(720px, 90%);
+      opacity: 0;
+      transition: opacity 0.45s ease;
+      pointer-events: none;
+    }
+
+    .persona-slide.is-active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .persona-slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 32px 70px rgba(30, 41, 59, 0.18);
+    }
+
+    .persona-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255, 255, 255, 0.85);
+      color: #1f2937;
+      font-size: 1.65rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18);
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .persona-nav-btn:first-of-type {
+      left: clamp(0.5rem, 3vw, 1.5rem);
+    }
+
+    .persona-nav-btn:last-of-type {
+      right: clamp(0.5rem, 3vw, 1.5rem);
+    }
+
+    .persona-nav-btn:hover {
+      background: rgba(255, 255, 255, 1);
+      transform: translateY(-50%) scale(1.03);
+    }
+
+    .persona-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .persona-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #e5e7eb;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .persona-dot.active {
+      background: #C41E3A;
+      transform: scale(1.1);
+    }
+
+    .section-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 22px;
+      box-shadow: 0 32px 70px rgba(15, 23, 42, 0.14);
+    }
+
+    @media (max-width: 800px) {
+      .cols {
+        columns: 1;
+      }
+
+      .persona-nav-btn {
+        width: 46px;
+        height: 46px;
+        font-size: 1.4rem;
+      }
+    }
   </style>
 </body>
 </html>

@@ -6,7 +6,7 @@ const createNavBar = () => {
         <span class="brand-text">Julia Yao</span>
       </a>
       <nav class="nav__links" aria-label="Main navigation">
-        <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="https://drive.google.com/file/d/1p9JfSayPRHn9ztjnRlRQqekNmAJl0Klr/view?usp=drive_link" target="_blank" rel="noopener">Resume</a>
       </nav>
     </div>
   `;
