@@ -62,19 +62,61 @@
     }
 
     .hero-prototype {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
       font-size: clamp(0.95rem, 1.9vw, 1.05rem);
+      color: #1f2937;
+      font-style: italic;
+    }
+
+    .prototype-callout {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .prototype-callout p {
+      margin: 0;
+      font-size: clamp(1.08rem, 2.4vw, 1.28rem);
+      font-weight: 600;
       color: #1f2937;
     }
 
-    .hero-prototype a {
-      color: #ab5ed2;
-      font-weight: 600;
-      text-decoration: underline;
-      text-decoration-thickness: 0.08em;
+    .prototype-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 8px 18px rgba(171, 94, 210, 0.18);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .hero-prototype a:hover {
-      color: #8c52ff;
+    .prototype-icon img {
+      width: 72%;
+      height: 72%;
+      object-fit: contain;
+    }
+
+    .prototype-icon:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 28px rgba(171, 94, 210, 0.24);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
     }
 
     .source-highlight {
@@ -158,6 +200,14 @@
       font-size: clamp(1.9rem, 4.5vw, 2.7rem);
       line-height: 1.1;
       font-weight: 700;
+      color: #ab5ed2;
+    }
+
+    .section-title.link-title {
+      color: #1f2937;
+    }
+
+    .link-title__accent {
       color: #ab5ed2;
     }
 
@@ -370,11 +420,18 @@
         <p class="hero-eyebrow">American Heart Association</p>
         <h1 class="hero-title">Thrive</h1>
         <p class="hero-summary">Thrive is an app that turns everyday wellness into an engaging, AI-powered, personalized journey.</p>
-        <p class="hero-prototype">Final Figma Prototype: <a href="https://www.figma.com/proto/esbJPok5bjC9sSQP1UekYO/Thrive-Prototype?page-id=1707%3A11146&amp;node-id=1707-12722&amp;starting-point-node-id=1707%3A12722&amp;t=fqPRUGyvo0WgbQrW-1" target="_blank" rel="noopener">View here</a></p>
+
       </div>
       <div class="hero-art">
         <img src="img/AHA/AHA cover qr.png" alt="Thrive app hero screens">
       </div>
+                <div class="hero-prototype">
+            <span>Final Figma Prototype</span>
+            <a class="prototype-icon" href="https://www.figma.com/proto/esbJPok5bjC9sSQP1UekYO/Thrive-Prototype?page-id=1707%3A11146&amp;node-id=1707-12722&amp;starting-point-node-id=1707%3A12722&amp;t=fqPRUGyvo0WgbQrW-1" target="_blank" rel="noopener">
+              <span class="sr-only">Open Figma Prototype</span>
+              <img src="img/AHA/Mascot.png" alt="Thrive mascot icon">
+            </a>
+          </div>
     </section>
 
     <section class="case-meta-row">
@@ -483,7 +540,7 @@
   <span class="section-tag">The Style Guide</span>
   <p class="style-note">According to color psychology, the purple (Lavendar) color series can soothe the user's emotions and provide gentle stimulation.</p>
     <div class="section-media">
-          <img src="img/AHA/Design Foundation.png" alt="Design Foundation" loading="lazy">
+          <img src="img/AHA/design foundation.png" alt="Design Foundation" loading="lazy">
     </div>
 </section>
 
@@ -535,9 +592,12 @@
 
     <section id="prototype" class="case-section">
       <span class="section-tag">Final Prototype</span>
-      <div class="-body">
-        <p>Explore the interactive flow we presented to stakeholders and usability testers.</p>
-        <a class="prototype-link" href="https://www.figma.com/proto/esbJPok5bjC9sSQP1UekYO/Thrive-Prototype?page-id=1707%3A11146&amp;node-id=1707-12722&amp;starting-point-node-id=1707%3A12722&amp;t=fqPRUGyvo0WgbQrW-1" target="_blank" rel="noopener">Open Figma Prototype</a>
+      <div class="section-body prototype-callout">
+        <h3 class="section-title link-title">Link to my Full Figma Prototype File <span class="link-title__accent">Here</span></h3>
+        <a class="prototype-icon" href="https://www.figma.com/proto/esbJPok5bjC9sSQP1UekYO/Thrive-Prototype?page-id=1707%3A11146&amp;node-id=1707-12722&amp;starting-point-node-id=1707%3A12722&amp;t=fqPRUGyvo0WgbQrW-1" target="_blank" rel="noopener">
+            <span class="sr-only">Open Figma Prototype</span>
+            <img src="img/AHA/Mascot.png" alt="Thrive mascot icon">
+          </a>
       </div>
     </section>
 
