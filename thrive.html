@@ -161,6 +161,29 @@
       gap: 0.5rem;
     }
 
+    .section-title2 {
+      margin: 0;
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      line-height: 1.5;
+      font-weight: 400;
+      color: #1f2937;
+    }
+
+    .section-title2 b {
+      font-weight: 700;
+      color: #ab5ed2;
+    }
+
+    .quote-sources {
+      margin: 0;
+      padding-left: 1.25rem;
+      display: grid;
+      gap: 0.35rem;
+      font-size: 0.9rem;
+      color: #4b5563;
+      list-style: decimal;
+    }
+
     .insight-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -278,7 +301,7 @@
 
     .case-pagination__name {
       font-size: 1.2rem;
-      font-weight: 600;
+      font-weight: 600; 
       color: #111827;
     }
 
@@ -371,10 +394,33 @@
       <span class="section-tag">Whitepaper Research</span>
             <p class="section-lead">We combined literature review, competitive audits, and community interviews to understand why motivation collapses after the early wins.</p>
 
-      <h2 class="section-title">Behavior Science + Interviews Uncovered 3 Barriers to Long-Term Change</h2>
+      <h3 class="section-title2">“...<b>one-size-fits-all</b> physical activity programs<b> did not fit their lifestyles </b>and reduced their willingness to continue using the app.”</h3>
+      <h3 class="section-title2">“... <b>uncertain</b> about what <b>types</b> and <b>amounts</b> of physical activity were<b> sufficient</b>, often <b>underestimating the value of everyday movement.</b>”</h3>
+      <h3 class="section-title2">“... Motivation to engage in physical activity declines <b>rapidly</b> when feedback is delayed and progress is not immediately visible.”</h3>
+
+      <ol class="quote-sources">
+        <li>Tran, J. et al. Engagement Features in Physical Activity Smartphone Apps: Focus Group Study With Sedentary People. JMIR mHealth and uHealth, 2019.</li>
+        <li>Künsting, J. et al. Exploring Users’ Experiences of the Uptake and Adoption of Physical Activity Apps. JMIR mHealth and uHealth, 2018.</li>
+        <li>Various Authors. Systematic review on gamification and feedback effectiveness in physical activity interventions. BMC Public Health / JMIR Publications.</li>
+      </ol>
+
+      <span class="section-tag">competitive audits</span>
       <div class="section-media">
-        <img src="img/AHA/Three reasons.png" alt="reasons" loading="lazy" controls>
-         </div>
+     <img src="img/AHA/competitors.png" alt="Reward system presentation slide" loading="lazy">
+
+      <h3 class="section-title2">Competitors had <b>NO HABIT BUILDING </b>but only Tracking, most of them are <B>NO CLINICAL</B> either. </h3>
+      </div>
+
+
+
+      <span class="section-tag">User Persona</span>
+      <div class="section-media">
+
+        <img src="img/AHA/Persona.png" alt="Reward system presentation slide" loading="lazy">
+
+      </div>
+
+     
     </section>
 
     <section id="insight" class="case-section">
@@ -382,13 +428,14 @@
       <h2 class="section-title">Accountability partners and adaptive coaching keep momentum alive.</h2>
       <p class="section-lead">When people see how small actions stack into heart-health impact, confidence and follow-through rise.</p>
       <div class="section-body">
-        <!-- <p>Behavior change sticks when guidance is adaptive, affirming, and framed around achievable wins instead of perfection.</p>
-      </div>
+       <div class="section-media">
+        <img src="img/AHA/Three reasons.png" alt="reasons" loading="lazy" controls>
+         </div>
     </section>
 
     <section id="how-might-we" class="case-section">
       <span class="section-tag">Design Question</span>
-      <h2 class="section-title">How might we turn clinical guidance into repeatable, rewarding routines?</h2> -->
+      <h2 class="section-title">How might we turn clinical guidance into repeatable, rewarding routines?</h2> 
       <p class="section-lead">This question anchored every iteration to avoid feature creep and keep the product grounded in evidence.</p>
     </section>
 
