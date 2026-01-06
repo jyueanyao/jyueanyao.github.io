@@ -105,7 +105,11 @@ body{
 .section__subtitle{color:var(--ink-2);margin-bottom:var(--s4)}
 
 /* Global Typography */
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
+  font-family: "Mont", var(--heading-font);
+}
+
+h3, h4, h5, h6 {
   font-family: var(--heading-font);
 }
 

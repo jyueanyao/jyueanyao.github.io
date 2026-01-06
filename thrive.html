@@ -48,7 +48,10 @@
       font-size: clamp(3rem, 5vw, 3.6rem);
       font-weight: 600;
       line-height: 1.05;
-      color: #0f172a;
+     background: linear-gradient(0deg,  #8c52ff 0%,#ff914d 100%);
+      -webkit-background-clip: text;
+      /*  */
+      -webkit-text-fill-color: transparent;
     }
 
     .hero-summary {
@@ -67,7 +70,7 @@
 
     .case-meta-row {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: clamp(1.5rem, 3vw, 2.5rem);
       padding-top: clamp(1.75rem, 4vw, 2.75rem);
       padding-bottom: clamp(2rem, 5vw, 3rem);
@@ -77,6 +80,7 @@
     .meta-card {
       display: grid;
       gap: 0.5rem;
+      align-content: start;
     }
 
     .meta-label {
@@ -127,13 +131,13 @@
       font-size: clamp(1.9rem, 4.5vw, 2.7rem);
       line-height: 1.1;
       font-weight: 700;
-      color: #0f172a;
+      color: #ab5ed2;
     }
 
     .section-lead {
       font-size: clamp(1.05rem, 2.1vw, 1.22rem);
       line-height: 1.7;
-      color: #1f2937;
+      color: #2e2d2d;
       max-width: 68ch;
     }
 
@@ -142,7 +146,7 @@
       gap: 1.1rem;
       font-size: 1rem;
       line-height: 1.7;
-      color: #1f2937;
+      color: #2e2d2d;
     }
 
     .section-body p {
@@ -283,6 +287,19 @@
       color: #4b5563;
     }
 
+  
+    @media (max-width: 900px) {
+      .case-meta-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .case-meta-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 720px) {
       .case-shell {
         padding: clamp(3rem, 10vw, 4rem) clamp(1rem, 6vw, 1.75rem) clamp(5rem, 12vw, 6rem);
@@ -303,10 +320,10 @@
       <div class="hero-copy">
         <p class="hero-eyebrow">American Heart Association</p>
         <h1 class="hero-title">Thrive</h1>
-        <p class="hero-summary">Turning heart-healthy science into daily habits.</p>
+        <p class="hero-summary">Thrive turns everyday wellness into an engaging, AI-powered, personalized journey.</p>
       </div>
       <div class="hero-art">
-        <img src="img/AHA/New Thrive.png" alt="Thrive app hero screens">
+        <img src="img/AHA/AHA cover qr.png" alt="Thrive app hero screens">
       </div>
     </section>
 
@@ -328,7 +345,7 @@
         <p class="meta-label">Focus</p>
         <ul class="meta-list">
           <li>Behavioral design</li>
-          <li>Journey mapping</li>
+          <li>UX Research/ UI Design</li>
           <li>Healthcare UX</li>
         </ul>
       </article>
@@ -336,40 +353,28 @@
 
     <section id="problem" class="case-section">
       <span class="section-tag">Problem</span>
-      <h2 class="section-title">Less than half of American adults complete recommended weekly activity.</h2>
-      <p class="section-lead">Sedentary routines compound cardiovascular risk, even for communities that understand the stakes.</p>
-      <div class="section-body">
-        <p>CDC data shows sustained inactivity keeps people on the path toward preventable disease. Interviews confirmed that even motivated adults rarely turn numbers into action when daily life gets in the way.</p>
-      </div>
+      <h2 class="section-title">Less than half of U.S. adults (47%) reach the recommended weekly physical movement levels.</h2>
+      <p class="section-lead">This statistic comes from CDC surveillance data based on the Physical Activity Guidelines for Americans, which track the percentage of adults meeting recommended aerobic and muscle-strengthening activity levels.</p>
+     
     </section>
  <section id="solution" class="case-section">
       <span class="section-tag">Solutions</span>
       <!-- <h2 class="section-title">Thrive reframes movement as an adaptive, rewarding journey.</h2> -->
       <div class="section-media">
-        <img src="img/AHA/Solution/AI Coach color.png.mov" alt="AI Coach" loading="lazy" controls>
         <img src="img/AHA/Solution/Community color.png" alt="Community feature presentation slide" loading="lazy">
+        <img src="img/AHA/Solution/AI Coach color.png" alt="AI Coach" loading="lazy" controls>
         <img src="img/AHA/Solution/Reward color.png" alt="Reward system presentation slide" loading="lazy">
       </div>
     </section>
 
     <section id="research" class="case-section">
-      <span class="section-tag">Research</span>
-      <h2 class="section-title">Behavior science and interviews revealed three blockers to lasting change.</h2>
-      <p class="section-lead">We combined literature review, competitive audits, and community interviews to understand why motivation collapses after the early wins.</p>
-      <div class="insight-grid">
-        <article class="insight-card">
-          <h3>1. Lack of motivation</h3>
-          <p>Motivation dropped after week two whenever Thrive felt like a generic tracker instead of a coach.</p>
-        </article>
-        <article class="insight-card">
-          <h3>Reason 02: Literacy gaps stall progress</h3>
-          <p>Limited health literacy made metrics feel abstract; participants asked for concrete translation into daily movement.</p>
-        </article>
-        <article class="insight-card">
-          <h3>Reason 03: Rigid plans break in real life</h3>
-          <p>Schedules, energy, and physical limitations change constantly, leaving one-size plans abandoned.</p>
-        </article>
-      </div>
+      <span class="section-tag">Whitepaper Research</span>
+            <p class="section-lead">We combined literature review, competitive audits, and community interviews to understand why motivation collapses after the early wins.</p>
+
+      <h2 class="section-title">Behavior Science + Interviews Uncovered 3 Barriers to Long-Term Change</h2>
+      <div class="section-media">
+        <img src="img/AHA/Three reasons.png" alt="reasons" loading="lazy" controls>
+         </div>
     </section>
 
     <section id="insight" class="case-section">
@@ -377,13 +382,13 @@
       <h2 class="section-title">Accountability partners and adaptive coaching keep momentum alive.</h2>
       <p class="section-lead">When people see how small actions stack into heart-health impact, confidence and follow-through rise.</p>
       <div class="section-body">
-        <p>Behavior change sticks when guidance is adaptive, affirming, and framed around achievable wins instead of perfection.</p>
+        <!-- <p>Behavior change sticks when guidance is adaptive, affirming, and framed around achievable wins instead of perfection.</p>
       </div>
     </section>
 
     <section id="how-might-we" class="case-section">
       <span class="section-tag">Design Question</span>
-      <h2 class="section-title">How might we turn clinical guidance into repeatable, rewarding routines?</h2>
+      <h2 class="section-title">How might we turn clinical guidance into repeatable, rewarding routines?</h2> -->
       <p class="section-lead">This question anchored every iteration to avoid feature creep and keep the product grounded in evidence.</p>
     </section>
 
