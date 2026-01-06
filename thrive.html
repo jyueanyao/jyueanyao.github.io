@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Thrive - Move More (AHA) - Project</title>
+  <title>Thrive - Project</title>
   <meta name="description" content="Thrive is an AHA-inspired Move More concept that brings Life's Essential 8 into daily routines.">
   <link rel="stylesheet" href="styles/style.css">
   <style>
@@ -77,6 +77,17 @@
       color: #8c52ff;
     }
 
+    .source-highlight {
+      color: #e11d48;
+      font-weight: 600;
+    }
+
+    .style-note {
+      font-family: "Mont", var(--body-font);
+      color: #6b7280;
+      font-style: italic;
+    }
+
     .hero-art img {
       width: 100%;
       display: block;
@@ -124,7 +135,7 @@
     }
 
     .case-section {
-      padding: clamp(2.4rem, 6vw, 3.2rem) 0 clamp(2.4rem, 6vw, 3.2rem);
+      padding: 0 0 clamp(2.4rem, 6vw, 3.2rem);
       border-bottom: 1px solid #e5e7eb;
       display: grid;
       gap: clamp(1.3rem, 3vw, 2.2rem);
@@ -358,7 +369,7 @@
       <div class="hero-copy">
         <p class="hero-eyebrow">American Heart Association</p>
         <h1 class="hero-title">Thrive</h1>
-        <p class="hero-summary">Thrive turns everyday wellness into an engaging, AI-powered, personalized journey.</p>
+        <p class="hero-summary">Thrive is an app that turns everyday wellness into an engaging, AI-powered, personalized journey.</p>
         <p class="hero-prototype">Final Figma Prototype: <a href="https://www.figma.com/proto/esbJPok5bjC9sSQP1UekYO/Thrive-Prototype?page-id=1707%3A11146&amp;node-id=1707-12722&amp;starting-point-node-id=1707%3A12722&amp;t=fqPRUGyvo0WgbQrW-1" target="_blank" rel="noopener">View here</a></p>
       </div>
       <div class="hero-art">
@@ -406,10 +417,13 @@
       </div>
     </section>
 
+
+
+
     <section id="research" class="case-section">
       <span class="section-tag">Whitepaper Research</span>
             <!-- <p class="section-lead">We combined literature review, competitive audits, and community interviews to understand why motivation collapses after the early wins.</p> -->
-<p class="section-lead">Starting with white paper research, I began to draw from research articlaes on the topic of -when I stumbled upon several statistics from literature review: </p>
+<p class="section-lead">Starting with white paper research, I began to draw from research articlaes on the topic of Physical Activity Adherence, Motivation & Behavior Change... when I stumbled upon several statistics from <span class="source-highlight">JMIR Publication:</span> </p>
       <h3 class="section-title2">“...<b>one-size-fits-all</b> physical activity programs<b> did not fit their lifestyles </b>and reduced their willingness to continue using the app.”</h3>
       <h3 class="section-title2">“... <b>uncertain</b> about what <b>types</b> and <b>amounts</b> of physical activity were<b> sufficient</b>, often <b>underestimating the value of everyday movement.</b>”</h3>
       <h3 class="section-title2">“... <b>Motivation </b>to engage in physical activity <b>declines</b> rapidly when feedback is delayed and progress is <b>not immediately visible</b>.”</h3>
@@ -419,7 +433,28 @@
         <li>Künsting, J. et al. Exploring Users’ Experiences of the Uptake and Adoption of Physical Activity Apps. JMIR mHealth and uHealth, 2018.</li>
         <li>Various Authors. Systematic review on gamification and feedback effectiveness in physical activity interventions. BMC Public Health / JMIR Publications.</li>
       </ol>
-<section id="competitve audits" class="case-section"></section>
+
+<section id="conclusion" class="case-section">
+      <span class="section-tag">Research Sythesize</span>
+      <p>We have summarized the literature reviews into three main reasons: </p>
+   
+      <div class="section-body">
+       <div class="section-media">
+        <img src="img/AHA/3 reasons.png" alt="reasons" loading="lazy" controls>
+         </div>
+      </div>
+    </section>
+
+    <section id="persona" class="case-section">
+      <span class="section-tag">Persona</span>
+      <p>Sam is a busy retail worker in his 30s who wants to build consistent workout habits but struggles with time, motivation, and generic fitness advice.</p>
+
+      <div class="section-media">
+        <img src="img/AHA/Persona.png" alt="Reward system presentation slide" loading="lazy">
+      </div>
+</section>
+
+   <section id="competitve audits" class="case-section"></section>
       <span class="section-tag">competitive audits</span>
          <p class="section-lead">We analyzed leading fitness apps including Strava, Fitbit, Nike Run Club and Apple Fitness.</p>
 
@@ -430,40 +465,23 @@
       </div>
 
 </section>
-<section id="persona" class="case-section">
-      <span class="section-tag">User Persona</span>
-      <p>Sam is a busy retail worker in his 30s who wants to build consistent workout habits but struggles with time, motivation, and generic fitness advice.</p>
 
-      <div class="section-media">
-        <img src="img/AHA/Persona.png" alt="Reward system presentation slide" loading="lazy">
-      </div>
-</section>
-     
-    </section>
+    
 
-    <section id="conclusion" class="case-section">
-      <span class="section-tag">Research Sythesize</span>
-      <h2 class="section-title">Most fitness apps optimize for tracking behavior, not for sustaining behavior change.</h2>
-      <p class="section-lead">When people see how small actions stack into heart-health impact, confidence and follow-through rise.</p>
-      <div class="section-body">
-       <div class="section-media">
-        <img src="img/AHA/Three reasons.png" alt="reasons" loading="lazy" controls>
-         </div>
-      </div>
-    </section>
+
 <section id="Direction" class="case-section">
 <span class="section-tag">Design Direction</span>
-<p><p>We synthesized our research findings into three core design directions and translated them into three key features to address users’ primary pain points.</p></p>
+<p>Based on the three main research insights that we sythesized, we did more literature reviews to figure out how to solve these three main pain points. </s></p>
  <div class="section-media">
-        <img src="img/AHA/Design Direction.png" alt="Direction" loading="lazy">
+        <img src="img/AHA/3 features.png" alt="Direction" loading="lazy">
       </div>
 
 
 </section>
 
 <section id="Design" class="case-section">
-  <span class="section-tag">Design Foundation</span>
-  
+  <span class="section-tag">The Style Guide</span>
+  <p class="style-note">According to color psychology, the purple (Lavendar) color series can soothe the user's emotions and provide gentle stimulation.</p>
     <div class="section-media">
           <img src="img/AHA/Design Foundation.png" alt="Design Foundation" loading="lazy">
     </div>
