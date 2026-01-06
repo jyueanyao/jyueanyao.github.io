@@ -61,6 +61,22 @@
       color: #1f2937;
     }
 
+    .hero-prototype {
+      font-size: clamp(0.95rem, 1.9vw, 1.05rem);
+      color: #1f2937;
+    }
+
+    .hero-prototype a {
+      color: #ab5ed2;
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-thickness: 0.08em;
+    }
+
+    .hero-prototype a:hover {
+      color: #8c52ff;
+    }
+
     .hero-art img {
       width: 100%;
       display: block;
@@ -310,7 +326,6 @@
       color: #4b5563;
     }
 
-  
     @media (max-width: 900px) {
       .case-meta-row {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -344,6 +359,7 @@
         <p class="hero-eyebrow">American Heart Association</p>
         <h1 class="hero-title">Thrive</h1>
         <p class="hero-summary">Thrive turns everyday wellness into an engaging, AI-powered, personalized journey.</p>
+        <p class="hero-prototype">Final Figma Prototype: <a href="https://www.figma.com/proto/esbJPok5bjC9sSQP1UekYO/Thrive-Prototype?page-id=1707%3A11146&amp;node-id=1707-12722&amp;starting-point-node-id=1707%3A12722&amp;t=fqPRUGyvo0WgbQrW-1" target="_blank" rel="noopener">View here</a></p>
       </div>
       <div class="hero-art">
         <img src="img/AHA/AHA cover qr.png" alt="Thrive app hero screens">
@@ -392,55 +408,74 @@
 
     <section id="research" class="case-section">
       <span class="section-tag">Whitepaper Research</span>
-            <p class="section-lead">We combined literature review, competitive audits, and community interviews to understand why motivation collapses after the early wins.</p>
-
+            <!-- <p class="section-lead">We combined literature review, competitive audits, and community interviews to understand why motivation collapses after the early wins.</p> -->
+<p class="section-lead">Starting with white paper research, I began to draw from research articlaes on the topic of -when I stumbled upon several statistics from literature review: </p>
       <h3 class="section-title2">“...<b>one-size-fits-all</b> physical activity programs<b> did not fit their lifestyles </b>and reduced their willingness to continue using the app.”</h3>
       <h3 class="section-title2">“... <b>uncertain</b> about what <b>types</b> and <b>amounts</b> of physical activity were<b> sufficient</b>, often <b>underestimating the value of everyday movement.</b>”</h3>
-      <h3 class="section-title2">“... Motivation to engage in physical activity declines <b>rapidly</b> when feedback is delayed and progress is not immediately visible.”</h3>
+      <h3 class="section-title2">“... <b>Motivation </b>to engage in physical activity <b>declines</b> rapidly when feedback is delayed and progress is <b>not immediately visible</b>.”</h3>
 
       <ol class="quote-sources">
         <li>Tran, J. et al. Engagement Features in Physical Activity Smartphone Apps: Focus Group Study With Sedentary People. JMIR mHealth and uHealth, 2019.</li>
         <li>Künsting, J. et al. Exploring Users’ Experiences of the Uptake and Adoption of Physical Activity Apps. JMIR mHealth and uHealth, 2018.</li>
         <li>Various Authors. Systematic review on gamification and feedback effectiveness in physical activity interventions. BMC Public Health / JMIR Publications.</li>
       </ol>
-
+<section id="competitve audits" class="case-section"></section>
       <span class="section-tag">competitive audits</span>
-      <div class="section-media">
-     <img src="img/AHA/competitors.png" alt="Reward system presentation slide" loading="lazy">
+         <p class="section-lead">We analyzed leading fitness apps including Strava, Fitbit, Nike Run Club and Apple Fitness.</p>
 
-      <h3 class="section-title2">Competitors had <b>NO HABIT BUILDING </b>but only Tracking, most of them are <B>NO CLINICAL</B> either. </h3>
+      <div class="section-media">
+     <img src="img/AHA/competitors.png" alt="competitive audits" loading="lazy">
+
+      <h3 class="section-title2">Most fitness apps focus heavily on <b>tracking</b> but offer <b>NO personalized based on users’ fitness level, health literacy, or real-life constraints</b>—creating a high barrier for beginners and underserved users.</h3>
       </div>
 
-
-
+</section>
+<section id="persona" class="case-section">
       <span class="section-tag">User Persona</span>
       <div class="section-media">
-
         <img src="img/AHA/Persona.png" alt="Reward system presentation slide" loading="lazy">
-
       </div>
-
+</section>
      
     </section>
 
-    <section id="insight" class="case-section">
-      <span class="section-tag">Insight</span>
-      <h2 class="section-title">Accountability partners and adaptive coaching keep momentum alive.</h2>
+    <section id="conclusion" class="case-section">
+      <span class="section-tag">Conclusion</span>
+      <h2 class="section-title">Most fitness apps optimize for tracking behavior, not for sustaining behavior change.</h2>
       <p class="section-lead">When people see how small actions stack into heart-health impact, confidence and follow-through rise.</p>
       <div class="section-body">
        <div class="section-media">
         <img src="img/AHA/Three reasons.png" alt="reasons" loading="lazy" controls>
          </div>
+      </div>
     </section>
+<section id="Direction" class="case-section">
+<span class="section-tag">Research Synthesize</span>
+<p><p>We synthesized our research findings into three core design directions and translated them into three key features to address users’ primary pain points.</p></p>
+ <div class="section-media">
+        <img src="img/AHA/Design Direction.png" alt="Direction" loading="lazy">
+      </div>
+</section>
 
-    <section id="how-might-we" class="case-section">
-      <span class="section-tag">Design Question</span>
-      <h2 class="section-title">How might we turn clinical guidance into repeatable, rewarding routines?</h2> 
-      <p class="section-lead">This question anchored every iteration to avoid feature creep and keep the product grounded in evidence.</p>
-    </section>
+<section id="Design" class="case-section">
+  <span class="section-tag">Design Foundation</span>
+  
+    <div class="section-media">
+          <img src="img/AHA/Design Foundation.png" alt="Design Foundation" loading="lazy">
+        </div>
 
-   
-    <section id="iterations" class="case-section">
+</section>
+
+<section id="final screens" class="case-section">
+<s，「「an class="setion-tag">The Final Screens</span>
+<p><b>THE FINAL PRODUCT</b></p>
+  <div class="section-media">
+          <img src="img/AHA/Final Screen.png" alt="Final screens" loading="lazy">
+        </div>
+</section>
+
+
+<!--    
       <span class="section-tag">Iterations</span>
       <h2 class="section-title">From novelty-driven gamification to sustained behavior change.</h2>
       <div class="section-body">
@@ -460,20 +495,28 @@
           <li>Community journeys transform progress into a shared experience.</li>
         </ul>
       </div>
-    </section>
+    </section>  -->
 
-    <section id="deliverables" class="case-section">
+    <!-- <section id="deliverables" class="case-section">
       <span class="section-tag">Deliverables</span>
       <h2 class="section-title">Everything packaged for stakeholder review.</h2>
       <p class="section-lead">High-fidelity prototypes, a behavioral design style guide, and workshop-ready storytelling decks support the next validation round.</p>
-    </section>
+    </section> -->
 
-    <section id="reflections" class="case-section">
+    <!-- <section id="reflections" class="case-section">
       <span class="section-tag">Reflection</span>
       <h2 class="section-title">Evidence-based design turns guidelines into lived routines.</h2>
       <div class="section-body">
         <p>Thrive reinforced that health products succeed when they respect motivation, accessibility, and sustainability, not just data accuracy.</p>
         <p>Grounding every decision in research showed stakeholders how UX strategy translates public health insight into daily behavior change.</p>
+      </div>
+    </section> -->
+
+    <section id="prototype" class="case-section">
+      <span class="section-tag">Final Prototype</span>
+      <div class="-body">
+        <p>Explore the interactive flow we presented to stakeholders and usability testers.</p>
+        <a class="prototype-link" href="https://www.figma.com/proto/esbJPok5bjC9sSQP1UekYO/Thrive-Prototype?page-id=1707%3A11146&amp;node-id=1707-12722&amp;starting-point-node-id=1707%3A12722&amp;t=fqPRUGyvo0WgbQrW-1" target="_blank" rel="noopener">Open Figma Prototype</a>
       </div>
     </section>
 
@@ -486,12 +529,6 @@
 
   <footer class="footer">
     <div class="container footer__row">
-      <p>© <span id="year"></span> Jyue-An Yao</p>
-    </div>
-  </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
