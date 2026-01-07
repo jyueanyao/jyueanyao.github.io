@@ -27,9 +27,9 @@ html, body { overflow-x: hidden; }
   --border:rgba(120,111,166,0.25);
 
   /* typography */
-  --heading-font:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --body-font:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --label-font:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --heading-font:"Mont","Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --body-font:"Mont","Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --label-font:"Mont","Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   --sf-font:var(--body-font);
 
   --max:1100px;
@@ -106,7 +106,7 @@ body{
 
 /* Global Typography */
 h1, h2 {
-  font-family: "Mont", var(--heading-font);
+  font-family: var(--heading-font);
 }
 
 h3, h4, h5, h6 {
@@ -114,7 +114,6 @@ h3, h4, h5, h6 {
 }
 
 h2 {
-  font-family: var(--heading-font);
   font-weight: 800;
   color: var(--heading-color);
   margin-top: 2rem;
