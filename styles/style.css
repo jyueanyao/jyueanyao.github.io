@@ -81,6 +81,18 @@ body{
 .hero__image:hover{box-shadow:none}
 .hero__image img{display:block;width:100%;height:100%;object-fit:cover;max-height:500px}
 
+.btn:active,
+.btn--primary:active,
+.btn--ghost:active,
+.nav__cta a:active,
+.filter-btn:active,
+.nav-btn:active {
+  background: #F2DCFF !important;
+  border-color: #F2DCFF !important;
+  color: var(--ink) !important;
+  box-shadow: 0 4px 12px rgba(108, 78, 140, 0.2) !important;
+}
+
 /* Scroll prompt - hidden by default, shows on hover */
 .scroll-prompt{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);text-align:center;opacity:0;transition:opacity 0.3s ease;z-index:10;display:flex;flex-direction:column;align-items:center;text-decoration:none;cursor:pointer}
 .hero__image:hover .scroll-prompt{opacity:1;animation:bounce-scroll 2s infinite}
@@ -161,7 +173,8 @@ p, li, span, div {
 .footer__row{display:flex;gap:var(--s5);justify-content:space-between;align-items:center;flex-wrap:wrap}
 
 /* Pseudo-selectors + a11y */
-a:focus{outline:3px solid var(--gold);outline-offset:3px}
+a{-webkit-tap-highlight-color:#F2DCFF}
+a:focus{outline:3px solid #F2DCFF;outline-offset:3px}
 p::first-line{letter-spacing:.2px}
 
 /* Responsive */
