@@ -209,6 +209,29 @@
 
     .link-title__accent {
       color: #ab5ed2;
+      text-decoration: none;
+    }
+
+    .link-title__accent:hover,
+    .link-title__accent:focus {
+      text-decoration: underline;
+    }
+
+    .prototype-embed {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      min-height: 360px;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 16px 32px rgba(171, 94, 210, 0.14);
+      background: #ffffff;
+    }
+
+    .prototype-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
 
     .section-lead {
@@ -594,11 +617,14 @@
     <section id="prototype" class="case-section">
       <span class="section-tag">Final Prototype</span>
       <div class="section-body prototype-callout">
-        <h3 class="section-title link-title">Link to my Full Figma Prototype File <span class="link-title__accent">Here</span></h3>
+        <h3 class="section-title link-title">Link to my Full Figma Prototype File <a class="link-title__accent" href="https://www.figma.com/proto/esbJPok5bjC9sSQP1UekYO/Thrive-Prototype?page-id=1707%3A11146&amp;node-id=1707-12722&amp;starting-point-node-id=1707%3A12722&amp;t=fqPRUGyvo0WgbQrW-1" target="_blank" rel="noopener">Here</a></h3>
         <a class="prototype-icon" href="https://www.figma.com/proto/esbJPok5bjC9sSQP1UekYO/Thrive-Prototype?page-id=1707%3A11146&amp;node-id=1707-12722&amp;starting-point-node-id=1707%3A12722&amp;t=fqPRUGyvo0WgbQrW-1" target="_blank" rel="noopener">
             <span class="sr-only">Open Figma Prototype</span>
             <img src="img/AHA/Mascot.png" alt="Thrive mascot icon">
           </a>
+      </div>
+      <div class="prototype-embed">
+        <iframe title="Thrive Figma prototype preview" loading="lazy" allowfullscreen src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FesbJPok5bjC9sSQP1UekYO%2FThrive-Prototype%3Fpage-id%3D1707%253A11146%26node-id%3D1707-12722%26starting-point-node-id%3D1707%253A12722%26t%3DfqPRUGyvo0WgbQrW-1%26hide-ui%3D1"></iframe>
       </div>
     </section>
 
