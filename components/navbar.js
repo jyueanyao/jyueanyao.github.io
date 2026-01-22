@@ -7,6 +7,7 @@ const createNavBar = () => {
       </a>
       <nav class="nav__links" aria-label="Main navigation">
         <a href="https://drive.google.com/file/d/1p9JfSayPRHn9ztjnRlRQqekNmAJl0Klr/view?usp=drive_link" target="_blank" rel="noopener">Resume</a>
+        <a href="https://www.linkedin.com/in/jyuean" target="_blank" rel="noopener">LinkedIn</a>
       </nav>
     </div>
   `;

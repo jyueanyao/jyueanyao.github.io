@@ -49,17 +49,13 @@ body{
 /* Header / Nav */
 .header{position:fixed;top:0;background:rgba(255,255,255,0.85);backdrop-filter:blur(16px);border-bottom:1px solid rgba(120,111,166,0.15);z-index:40;width:100%;left:0;right:0;box-shadow:0 6px 24px rgba(94,78,192,.12)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);padding:1.2rem 0;flex-wrap:wrap}
-.brand{display:flex;align-items:center;gap:.8rem;font-weight:800;letter-spacing:.2px;text-decoration:none;color:var(--heading-color);font-size:1.4rem;transition:color .2s}
+.brand{display:flex;align-items:center;gap:.8rem;font-weight:500;letter-spacing:-.018em;text-decoration:none;color:var(--heading-color);font-size:clamp(1rem,2.2vw,1.55rem);transition:color .2s ease;font-family:"Playfair Display","Times New Roman",serif}
 .brand:hover{color:var(--accent-primary);text-decoration:none}
 .brand__dot{width:12px;height:12px;border-radius:999px;background:var(--gold)}
 
-/* Ensure brand text is always dark */
-.brand .brand-text {
-  color: var(--heading-color) !important;
-}
-.brand:hover .brand-text {
-  color: var(--accent-primary) !important;
-}
+/* Refined wordmark styling */
+.brand .brand-text{font-family:"Playfair Display","Times New Roman",serif;font-weight:500;letter-spacing:-.018em;color:var(--heading-color);transition:color .2s ease}
+.brand:hover .brand-text{color:var(--accent-primary)}
 .nav__links{display:flex;gap:var(--s4);flex-wrap:wrap}
 .nav__links a{text-decoration:none;color:var(--heading-color);padding:.35rem .6rem;border-radius:10px;font-size:.95rem;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;transition:color .2s,background .2s}
 .nav__links a:hover{color:var(--accent-primary);background:rgba(125,99,255,0.12)}
