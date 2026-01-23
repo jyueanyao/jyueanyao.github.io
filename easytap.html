@@ -258,9 +258,12 @@
                 </div>
               </section>
 
-              <div class="project-nav">
-                <a href="recycle.html" class="nav-btn nav-btn--prev">← Previous</a>
-                <a href="thrive.html" class="nav-btn nav-btn--next">Next →</a>
+              <div class="case-footer">
+                <p class="case-footer__title">Thanks for reading EasyTap</p>
+                <div class="case-footer__actions">
+                  <a href="projects.html" class="btn btn--ghost">Back to Projects</a>
+                  <a href="thrive.html" class="btn btn--primary">Read Thrive →</a>
+                </div>
               </div>
             </div>
           </section>
@@ -506,6 +509,32 @@
         height: 46px;
         font-size: 1.4rem;
       }
+    }
+
+    /* Case Footer (bottom callout) */
+    .case-footer {
+      margin-top: clamp(2rem, 4vw, 3rem);
+      padding: clamp(1.5rem, 4vw, 2rem);
+      text-align: center;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+    }
+
+    .case-footer__title {
+      font-family: "Playfair Display", "Times New Roman", serif;
+      font-weight: 500;
+      letter-spacing: -0.015em;
+      color: var(--heading-color);
+      font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+      margin: 0 0 0.75rem;
+    }
+
+    .case-footer__actions {
+      display: flex;
+      justify-content: center;
+      gap: var(--s3);
+      flex-wrap: wrap;
     }
   </style>
 </body>
