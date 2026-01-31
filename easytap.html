@@ -102,44 +102,42 @@
   <header class="header"></header>
   <script src="components/navbar.js"></script>
 
-  <main class="case-page">
-    <section class="hero-full">
-      <div class="hero-right">
+  <main class="case-shell">
+    <section class="hero-banner">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">Product Design</p>
+        <h1 class="hero-title">EasyTap</h1>
+        <p class="hero-summary">Detachable tap dance shoes for dancers — a cost-effective solution that enables flexibility without compromising performance.</p>
+      </div>
+      <div class="hero-art">
         <img src="img/EasyTap/Shoe try on.png" alt="EasyTap Product Mockup">
       </div>
     </section>
 
-    <section class="case">
-      <!-- Project Description -->
-      <div style="margin-bottom: 3rem;">
-        <h1 style="font-size: 3rem; font-weight: 900; color: var(--heading-color); margin-bottom: 1rem; font-family: var(--sf-font);">EasyTap</h1>
-        <p style="font-size: 1.2rem; color: var(--text-color); line-height: 1.6; max-width: 800px;">
-          Detachable tap dance shoes for dancers - a cost-effective solution that enables flexibility without compromising performance
-        </p>
-      </div>
-
-      <!-- Four Column Info Layout like FlameKeepers -->
-      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 3rem; padding: 2rem 0; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;">
-        <div>
-          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">TIMELINE</h4>
-          <p style="font-size: 0.9rem; color: var(--text-color);">Aug. 2025 - Present</p>
-          <p style="font-size: 0.8rem; color: var(--text-color);">[4+ Months]</p>
-        </div>
-        <div>
-          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">TEAM</h4>
-          <p style="font-size: 0.9rem; color: var(--text-color);">2 Product</p>
-          <p style="font-size: 0.9rem; color: var(--text-color);">specialists</p>
-        </div>
-        <div>
-          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">ROLE</h4>
-          <p style="font-size: 0.9rem; color: var(--text-color);">Product Designer,</p>
-          <p style="font-size: 0.9rem; color: var(--text-color);">UX Researcher</p>
-        </div>
-        <div>
-          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">SKILLS</h4>
-          <p style="font-size: 0.9rem; color: var(--text-color);">Product Design, User Research</p>
-          <p style="font-size: 0.9rem; color: var(--text-color);">Prototyping, Market Analysis</p>
-        </div>
+    <section>
+      <!-- Meta Row (Thrive-style) -->
+      <div class="case-meta-row">
+        <article class="meta-card">
+          <p class="meta-label">Timeline</p>
+          <ul class="meta-list">
+            <li>Aug. 2025 – Present <span>4+ months</span></li>
+          </ul>
+        </article>
+        <article class="meta-card">
+          <p class="meta-label">My Role</p>
+          <ul class="meta-list">
+            <li>Product Designer</li>
+            <li>UX Researcher</li>
+          </ul>
+        </article>
+        <article class="meta-card">
+          <p class="meta-label">Focus</p>
+          <ul class="meta-list">
+            <li>Product Design</li>
+            <li>Prototyping</li>
+            <li>Market Analysis</li>
+          </ul>
+        </article>
       </div>
 
       <!-- Case Study with Left Navigation -->
@@ -154,11 +152,11 @@
           </ul>
         </nav> -->
 
-        <div class="case-content">
-          <section id="overview">
-            <div class="section-inner">
-              <h2>Overview</h2>
-              <div class="impact-grid">
+        <div>
+          <section id="overview" class="case-section">
+            <span class="section-tag">Overview</span>
+            <h2 class="section-title">Overview</h2>
+            <div class="insight-grid">
                 <div>
                   <h3 style="color: var(--heading-color); font-family: var(--sf-font);">Impact — For Dancers</h3>
                   <ul style="color: var(--text-color);">
@@ -176,34 +174,30 @@
                     <li>Growing market for affordable solutions</li>
                   </ul>
                 </div>
-              </div>
             </div>
           </section>
-
-          <section id="research">
-            <div class="section-inner">
-              <h2>Research</h2>
-              <p>
-                Dancers face challenges with traditional tap shoes: high cost, difficulty in transportation, and the burden of carrying multiple pairs. Many dancers wish for a more flexible, cost-effective solution that doesn't compromise on performance.
-              </p>
-            </div>
+          <section id="research" class="case-section">
+            <span class="section-tag">Research</span>
+            <h2 class="section-title">Research</h2>
+            <p class="section-lead">
+              Dancers face challenges with traditional tap shoes: high cost, difficulty in transportation, and the burden of carrying multiple pairs. Many dancers wish for a more flexible, cost-effective solution that doesn't compromise on performance.
+            </p>
           </section>
 
-          <section id="ideation">
-            <div class="section-inner">
-              <h2>Ideation</h2>
-              <p>
-                <strong style="color: #0052a3;">How might we</strong> create an affordable, portable tap shoe solution that enables dancers to reduce costs and carrying burden while maintaining performance quality?
-              </p>
-            </div>
+          <section id="ideation" class="case-section">
+            <span class="section-tag">Ideation</span>
+            <h2 class="section-title">Ideation</h2>
+            <p class="section-lead">
+              <strong style="color: #0052a3;">How might we</strong> create an affordable, portable tap shoe solution that enables dancers to reduce costs and carrying burden while maintaining performance quality?
+            </p>
           </section>
 
-          <section id="solution">
-            <div class="section-inner">
-              <h2>Solution</h2>
-              <p>
-                <strong style="color: #8B0000;">EasyTap</strong> is a detachable tap shoe system that allows dancers to convert regular dance shoes into tap shoes, reducing cost and carrying burden while providing professional-grade performance.
-              </p>
+          <section id="solution" class="case-section">
+            <span class="section-tag">Solution</span>
+            <h2 class="section-title">Solution</h2>
+            <p class="section-lead">
+              <strong style="color: #8B0000;">EasyTap</strong> is a detachable tap shoe system that allows dancers to convert regular dance shoes into tap shoes, reducing cost and carrying burden while providing professional-grade performance.
+            </p>
 
               <div class="persona-gallery">
                 <div class="persona-stage">
@@ -265,7 +259,6 @@
                   <a href="thrive.html" class="btn btn--primary">Read Thrive →</a>
                 </div>
               </div>
-            </div>
           </section>
         </div>
       </div>
@@ -344,7 +337,56 @@
     });
   </script>
   <style>
-    .case {
+    /* Thrive-style container and section layout */
+    .case-shell {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: clamp(4rem, 8vw, 5.5rem) clamp(1.5rem, 5vw, 3.5rem) clamp(6rem, 9vw, 7rem);
+      display: grid;
+      gap: clamp(3rem, 7vw, 4.5rem);
+    }
+
+    .hero-banner {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: clamp(1.75rem, 4vw, 3rem);
+      align-items: center;
+      padding-bottom: clamp(2.5rem, 5vw, 3.5rem);
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .hero-copy { display: grid; gap: 1.15rem; }
+    .hero-eyebrow { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.28em; font-weight: 700; color: #6b7280; }
+    .hero-title { margin: 0; font-size: clamp(3rem, 5vw, 3.6rem); font-weight: 600; line-height: 1.05; color: var(--heading-color); }
+    .hero-summary { font-size: clamp(1.1rem, 2.2vw, 1.3rem); line-height: 1.7; max-width: 48ch; color: var(--text-color); }
+
+    .hero-art img { width: 100%; display: block; border-radius: 18px; border: 1px solid #e5e7eb; }
+
+    .case-meta-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(1.5rem, 3vw, 2.5rem);
+      padding-top: clamp(1.75rem, 4vw, 2.75rem);
+      padding-bottom: clamp(2rem, 5vw, 3rem);
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .meta-card { display: grid; gap: 0.5rem; align-content: start; }
+    .meta-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.28em; font-weight: 700; color: #374151; }
+    .meta-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.35rem; font-size: 1rem; color: var(--text-color); }
+    .meta-list li span { display: block; font-size: 0.85rem; color: #6b7280; }
+
+    .case-section {
+      padding: 0 0 clamp(2.4rem, 6vw, 3.2rem);
+      border-bottom: 1px solid #e5e7eb;
+      display: grid;
+      gap: clamp(1.3rem, 3vw, 2.2rem);
+    }
+    .case-section:last-of-type { border-bottom: none; }
+    .section-tag { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.28em; font-weight: 700; color: #6b7280; }
+    .section-title { margin: 0; font-size: clamp(1.9rem, 4.5vw, 2.4rem); line-height: 1.1; font-weight: 700; color: var(--heading-color); }
+    .section-lead { font-size: clamp(1.05rem, 2.1vw, 1.22rem); line-height: 1.7; color: var(--text-color); max-width: 68ch; }
+
+    .insight-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: clamp(1.25rem, 3vw, 2.2rem); }
       width: min(1100px, 92vw);
       margin: clamp(-6rem, -12vw, -4rem) auto clamp(3rem, 7vw, 5rem);
       padding: clamp(2.5rem, 5vw, 3.75rem);
@@ -355,12 +397,7 @@
       gap: clamp(2rem, 5vw, 3.25rem);
     }
 
-    .case h1 {
-      font-size: clamp(2.5rem, 6vw, 3.75rem);
-      margin: 0 0 1rem;
-      font-family: var(--sf-font);
-      color: var(--heading-color);
-    }
+    /* Legacy EasyTap styles below, kept for gallery/components */
 
     .case p {
       font-size: 1.05rem;
@@ -396,11 +433,7 @@
       column-gap: 24px;
     }
 
-    .impact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: clamp(1.5rem, 4vw, 2.5rem);
-    }
+    /* Use Thrive's .insight-grid instead of .impact-grid */
 
     .persona-gallery {
       display: grid;
